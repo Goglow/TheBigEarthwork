@@ -8,6 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		8389A49B230B953A005CA4FB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A49A230B953A005CA4FB /* main.swift */; };
+		8389A4D0230B9DB9005CA4FB /* arm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4C1230B9DB7005CA4FB /* arm.swift */; };
+		8389A4D1230B9DB9005CA4FB /* scythe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4C2230B9DB7005CA4FB /* scythe.swift */; };
+		8389A4D2230B9DB9005CA4FB /* enchantress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4C3230B9DB7005CA4FB /* enchantress.swift */; };
+		8389A4D3230B9DB9005CA4FB /* sword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4C4230B9DB7005CA4FB /* sword.swift */; };
+		8389A4D4230B9DB9005CA4FB /* ditcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4C5230B9DB7005CA4FB /* ditcher.swift */; };
+		8389A4D5230B9DB9005CA4FB /* character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4C6230B9DB7005CA4FB /* character.swift */; };
+		8389A4D6230B9DB9005CA4FB /* warrior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4C7230B9DB8005CA4FB /* warrior.swift */; };
+		8389A4D7230B9DB9005CA4FB /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4C8230B9DB8005CA4FB /* player.swift */; };
+		8389A4D8230B9DB9005CA4FB /* direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4C9230B9DB8005CA4FB /* direction.swift */; };
+		8389A4D9230B9DB9005CA4FB /* armClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4CA230B9DB8005CA4FB /* armClass.swift */; };
+		8389A4DA230B9DB9005CA4FB /* philter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4CB230B9DB8005CA4FB /* philter.swift */; };
+		8389A4DB230B9DB9005CA4FB /* druid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4CC230B9DB8005CA4FB /* druid.swift */; };
+		8389A4DC230B9DB9005CA4FB /* characterClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4CD230B9DB8005CA4FB /* characterClass.swift */; };
+		8389A4DD230B9DB9005CA4FB /* potion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4CE230B9DB8005CA4FB /* potion.swift */; };
+		8389A4DE230B9DB9005CA4FB /* class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4CF230B9DB9005CA4FB /* class.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +40,21 @@
 /* Begin PBXFileReference section */
 		8389A497230B953A005CA4FB /* TheBigEarthwork */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TheBigEarthwork; sourceTree = BUILT_PRODUCTS_DIR; };
 		8389A49A230B953A005CA4FB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		8389A4C1230B9DB7005CA4FB /* arm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = arm.swift; sourceTree = "<group>"; };
+		8389A4C2230B9DB7005CA4FB /* scythe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scythe.swift; sourceTree = "<group>"; };
+		8389A4C3230B9DB7005CA4FB /* enchantress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = enchantress.swift; sourceTree = "<group>"; };
+		8389A4C4230B9DB7005CA4FB /* sword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sword.swift; sourceTree = "<group>"; };
+		8389A4C5230B9DB7005CA4FB /* ditcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ditcher.swift; sourceTree = "<group>"; };
+		8389A4C6230B9DB7005CA4FB /* character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = character.swift; sourceTree = "<group>"; };
+		8389A4C7230B9DB8005CA4FB /* warrior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = warrior.swift; sourceTree = "<group>"; };
+		8389A4C8230B9DB8005CA4FB /* player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
+		8389A4C9230B9DB8005CA4FB /* direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = direction.swift; sourceTree = "<group>"; };
+		8389A4CA230B9DB8005CA4FB /* armClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = armClass.swift; sourceTree = "<group>"; };
+		8389A4CB230B9DB8005CA4FB /* philter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = philter.swift; sourceTree = "<group>"; };
+		8389A4CC230B9DB8005CA4FB /* druid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = druid.swift; sourceTree = "<group>"; };
+		8389A4CD230B9DB8005CA4FB /* characterClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = characterClass.swift; sourceTree = "<group>"; };
+		8389A4CE230B9DB8005CA4FB /* potion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = potion.swift; sourceTree = "<group>"; };
+		8389A4CF230B9DB9005CA4FB /* class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = class.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +88,21 @@
 			isa = PBXGroup;
 			children = (
 				8389A49A230B953A005CA4FB /* main.swift */,
+				8389A4C1230B9DB7005CA4FB /* arm.swift */,
+				8389A4CA230B9DB8005CA4FB /* armClass.swift */,
+				8389A4C6230B9DB7005CA4FB /* character.swift */,
+				8389A4CD230B9DB8005CA4FB /* characterClass.swift */,
+				8389A4CF230B9DB9005CA4FB /* class.swift */,
+				8389A4C9230B9DB8005CA4FB /* direction.swift */,
+				8389A4C5230B9DB7005CA4FB /* ditcher.swift */,
+				8389A4CC230B9DB8005CA4FB /* druid.swift */,
+				8389A4C3230B9DB7005CA4FB /* enchantress.swift */,
+				8389A4CB230B9DB8005CA4FB /* philter.swift */,
+				8389A4C8230B9DB8005CA4FB /* player.swift */,
+				8389A4CE230B9DB8005CA4FB /* potion.swift */,
+				8389A4C2230B9DB7005CA4FB /* scythe.swift */,
+				8389A4C4230B9DB7005CA4FB /* sword.swift */,
+				8389A4C7230B9DB8005CA4FB /* warrior.swift */,
 			);
 			path = TheBigEarthwork;
 			sourceTree = "<group>";
@@ -120,7 +165,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8389A4D0230B9DB9005CA4FB /* arm.swift in Sources */,
+				8389A4D5230B9DB9005CA4FB /* character.swift in Sources */,
+				8389A4D4230B9DB9005CA4FB /* ditcher.swift in Sources */,
 				8389A49B230B953A005CA4FB /* main.swift in Sources */,
+				8389A4D7230B9DB9005CA4FB /* player.swift in Sources */,
+				8389A4D9230B9DB9005CA4FB /* armClass.swift in Sources */,
+				8389A4DB230B9DB9005CA4FB /* druid.swift in Sources */,
+				8389A4D2230B9DB9005CA4FB /* enchantress.swift in Sources */,
+				8389A4D1230B9DB9005CA4FB /* scythe.swift in Sources */,
+				8389A4DA230B9DB9005CA4FB /* philter.swift in Sources */,
+				8389A4DD230B9DB9005CA4FB /* potion.swift in Sources */,
+				8389A4DC230B9DB9005CA4FB /* characterClass.swift in Sources */,
+				8389A4DE230B9DB9005CA4FB /* class.swift in Sources */,
+				8389A4D8230B9DB9005CA4FB /* direction.swift in Sources */,
+				8389A4D6230B9DB9005CA4FB /* warrior.swift in Sources */,
+				8389A4D3230B9DB9005CA4FB /* sword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
