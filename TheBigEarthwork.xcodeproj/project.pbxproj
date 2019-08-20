@@ -22,6 +22,7 @@
 		8389A4DD230B9DB9005CA4FB /* potion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4CE230B9DB8005CA4FB /* potion.swift */; };
 		83F8A86F230C252300905D09 /* chest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8A86E230C252300905D09 /* chest.swift */; };
 		83F8A871230C2B4E00905D09 /* gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8A870230C2B4E00905D09 /* gender.swift */; };
+		83F8A873230C45C000905D09 /* game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8A872230C45C000905D09 /* game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,6 +54,7 @@
 		8389A4CE230B9DB8005CA4FB /* potion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = potion.swift; sourceTree = "<group>"; };
 		83F8A86E230C252300905D09 /* chest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chest.swift; sourceTree = "<group>"; };
 		83F8A870230C2B4E00905D09 /* gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gender.swift; sourceTree = "<group>"; };
+		83F8A872230C45C000905D09 /* game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				8389A4C5230B9DB7005CA4FB /* ditcher.swift */,
 				8389A4CC230B9DB8005CA4FB /* druid.swift */,
 				8389A4C3230B9DB7005CA4FB /* enchantress.swift */,
+				83F8A872230C45C000905D09 /* game.swift */,
 				83F8A870230C2B4E00905D09 /* gender.swift */,
 				8389A49A230B953A005CA4FB /* main.swift */,
 				8389A4CB230B9DB8005CA4FB /* philter.swift */,
@@ -177,6 +180,7 @@
 				8389A4D8230B9DB9005CA4FB /* direction.swift in Sources */,
 				8389A4D6230B9DB9005CA4FB /* warrior.swift in Sources */,
 				8389A4D3230B9DB9005CA4FB /* sword.swift in Sources */,
+				83F8A873230C45C000905D09 /* game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

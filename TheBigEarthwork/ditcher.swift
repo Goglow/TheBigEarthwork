@@ -11,7 +11,7 @@ import Foundation
 // The ditcher is a man who, as his name indicates, is ruthless.
 
 class Ditcher: Character {
-    var arm = Scythe.self
+    var arm = Scythe()
     
     init() {
         super.init(characterName: "Xenophane", gender: .male, life: 110)
