@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+class Arm {
+    var damage: Int
+    var repair: Int
+    var remote: Bool
+    
+    init(damage: Int, repair: Int, remote: Bool) {
+        self.damage = damage
+        self.repair = repair
+        self.remote = remote
+    }
+}

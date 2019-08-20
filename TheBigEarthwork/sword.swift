@@ -9,3 +9,9 @@
 import Foundation
 
 // The weapon of the warrior is the sword.
+
+class Sword: Arm {
+    init() {
+        super.init(damage: 40, repair: 10, remote: false)
+    }
+}

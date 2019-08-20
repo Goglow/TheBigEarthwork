@@ -9,3 +9,9 @@
 import Foundation
 
 // The weapon of the ditcher is the scythe.
+
+class Scythe: Arm {
+    init() {
+        super.init(damage: 50, repair: 0, remote: true)
+    }
+}
