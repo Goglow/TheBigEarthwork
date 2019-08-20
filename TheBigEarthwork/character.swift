@@ -9,17 +9,17 @@
 import Foundation
 
 class Character {
-    var name: String
-    var arm: Arm
+    var characterName: String
+    var gender: Gender
     var life: Int
     var movement: Int
     var position: (X: Int, Y: Int)
     
-    init(name: String, arm: Arm, life: Int, movement: Int, position: (Int, Int)) {
-        self.name = name
-        self.arm = arm
+    init(characterName: String, gender: Gender, life: Int) {
+        self.characterName = characterName
+        self.gender = gender
         self.life = life
-        self.movement = movement
-        self.position = position
+        movement = 2
+        position = (0, 0)
     }
 }

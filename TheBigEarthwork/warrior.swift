@@ -9,3 +9,15 @@
 import Foundation
 
 // The warrior is a strong woman who handles weapons well.
+
+class Warrior: Character {
+    var arm = Sword.self
+    
+    init() {
+        super.init(characterName: "Anaximene", gender: .female, life: 120)
+    }
+    
+    init(name: String) {
+        super.init(characterName: name, gender: .female, life: 120)
+    }
+}

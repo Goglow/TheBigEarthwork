@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+class Player {
+    var name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    func input() -> Int {
+        let strData = readLine()
+        
+        return Int(strData!)!
+    }
+}
