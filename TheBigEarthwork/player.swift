@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Player {
+/*class Player {
     var name: String
     
     init(name: String) {
@@ -17,4 +17,7 @@ class Player {
 }
 
 var player1 = Player(name: "Olga")
-var player2 = Player(name: "Dimitri")
+var player2 = Player(name: "Dimitri")*/
+
+
+// Faire les joueurs composés leur équipe

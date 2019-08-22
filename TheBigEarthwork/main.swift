@@ -13,6 +13,8 @@ func input() -> Int {
     
     return Int(strData!)!
 }
+// Comprendre la fonction input dans son détail (Déballage d'optionnel : Voir cours partie optionnel)
+
 
 /* Hello,
  Encore bienvenue parmi nous !
