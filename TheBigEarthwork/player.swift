@@ -14,10 +14,7 @@ class Player {
     init(name: String) {
         self.name = name
     }
-    
-    func input() -> Int {
-        let strData = readLine()
-        
-        return Int(strData!)!
-    }
 }
+
+var player1 = Player(name: "Olga")
+var player2 = Player(name: "Dimitri")

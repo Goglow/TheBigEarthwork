@@ -8,6 +8,12 @@
 
 import Foundation
 
+func input() -> Int {
+    let strData = readLine()
+    
+    return Int(strData!)!
+}
+
 /* Hello,
  Encore bienvenue parmi nous !
  J’ai donc besoin que tu réalises le code d’une application iOS permettant de :
@@ -29,4 +35,3 @@ import Foundation
  Merci beaucoup !
  
  Charlotte, game-designeuse, FrenchGameFactory */
-
