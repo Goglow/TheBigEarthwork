@@ -12,6 +12,6 @@ import Foundation
 
 class Potion: Arm {
     init() {
-        super.init(damage: 30, repair: 20, remote: true)
+        super.init(damage: 30, repair: 20)
     }
 }

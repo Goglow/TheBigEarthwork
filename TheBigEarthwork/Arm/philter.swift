@@ -12,6 +12,6 @@ import Foundation
 
 class Philter: Arm {
     init() {
-        super.init(damage: 20, repair: 20, remote: false)
+        super.init(damage: 20, repair: 20)
     }
 }

@@ -7,173 +7,81 @@
 //
 
 import Foundation
-// Quand le jeu commence, les joueurs se présentent
+// Quand le jeu commence, les joueurs se présentent un après l'autre
 
-print("Hello Player 1 ! What is your name?")
-if let player1 = readLine() {
-    print("It's ok, \(player1)")
-}
-
-print("Hello Player 2 ! What is your name?")
-if let player2 = readLine() {
-    print("It's ok, \(player2)")
-}
-
-print("Joueur 1, composes ton équipe !"
-    + "\n Choisis ton premier personnage :"
-    + "\n1. Enchantress"
-    + "\n2. Druid"
-    + "\n3. Warrior"
-    + "\n4. Ditcher"
-)
-
-if let choice = readLine() {
-    switch choice {
-    case "1":
-        print("Good choice, your character is a female, give her a name")
-        break
-    case "2":
-        print("Good choice, your character is a male, give him a name")
-        break
-    case "3":
-        print("Good choice, your character is a female, give her a name")
-        break
-    case "4":
-        print("Good choice, your character is a male, give him a name")
-        break
-    default:
-        print("This choice is not possible, try again")
+func playerIntroduce(player: Player) {
+    print("Hello Player 1 ! What is your name?")
+    if let player1 = readLine() {
+        print("It's ok, \(player1)")
+    }
+    print("Hello Player 2 ! What is your name?")
+    if let player2 = readLine() {
+        print("It's ok, \(player2)")
     }
 }
 
-print("Choisis ton deuxième personnage :"
-    + "\n1. Enchantress"
-    + "\n2. Druid"
-    + "\n3. Warrior"
-    + "\n4. Ditcher"
-)
+// Après la présentation, les joueurs composent leur équipe tour à tour
 
-if let choice = readLine() {
-    switch choice {
-    case "1":
-        print("Good choice, your character is a female, give her a name")
-        break
-    case "2":
-        print("Good choice, your character is a male, give him a name")
-        break
-    case "3":
-        print("Good choice, your character is a female, give her a name")
-        break
-    case "4":
-        print("Good choice, your character is a male, give him a name")
-        break
-    default:
-        print("This choice is not possible, try again")
+func playerCreateTeam(player: Player) {
+    print("\(player1), composes ton équipe !"
+        + "\n Choisis ton premier personnage :"
+        + "\n1. Enchantress"
+        + "\n2. Druid"
+        + "\n3. Warrior"
+        + "\n4. Ditcher")
+    if let choice = readLine() {
+        switch choice {
+        case "1":
+            print("Good choice, your character is a female, give her a name")
+        case "2":
+            print("Good choice, your character is a male, give him a name")
+        case "3":
+            print("Good choice, your character is a female, give her a name")
+        case "4":
+            print("Good choice, your character is a male, give him a name")
+        default:
+            print("This choice is not possible, try again")
+        }
     }
-}
-
-print("Choisis ton dernier personnage :"
-    + "\n1. Enchantress"
-    + "\n2. Druid"
-    + "\n3. Warrior"
-    + "\n4. Ditcher"
-)
-
-if let choice = readLine() {
-    switch choice {
-    case "1":
-        print("Good choice, your character is a female, give her a name")
-        break
-    case "2":
-        print("Good choice, your character is a male, give him a name")
-        break
-    case "3":
-        print("Good choice, your character is a female, give her a name")
-        break
-    case "4":
-        print("Good choice, your character is a male, give him a name")
-        break
-    default:
-        print("This choice is not possible, try again")
+    print("Choisis ton deuxième personnage :"
+        + "\n1. Enchantress"
+        + "\n2. Druid"
+        + "\n3. Warrior"
+        + "\n4. Ditcher"
+    )
+    if let choice = readLine() {
+        switch choice {
+        case "1":
+            print("Good choice, your character is a female, give her a name")
+        case "2":
+            print("Good choice, your character is a male, give him a name")
+        case "3":
+            print("Good choice, your character is a female, give her a name")
+        case "4":
+            print("Good choice, your character is a male, give him a name")
+        default:
+            print("This choice is not possible, try again")
+        }
     }
-}
-
-print("Joueur 2, composes ton équipe !"
-    + "\n Choisis ton premier personnage :"
-    + "\n1. Enchantress"
-    + "\n2. Druid"
-    + "\n3. Warrior"
-    + "\n4. Ditcher"
-)
-
-if let choice = readLine() {
-    switch choice {
-    case "1":
-        print("Good choice, your character is a female, give her a name")
-        break
-    case "2":
-        print("Good choice, your character is a male, give him a name")
-        break
-    case "3":
-        print("Good choice, your character is a female, give her a name")
-        break
-    case "4":
-        print("Good choice, your character is a male, give him a name")
-        break
-    default:
-        print("This choice is not possible, try again")
-    }
-}
-
-print("Choisis ton deuxième personnage :"
-    + "\n1. Enchantress"
-    + "\n2. Druid"
-    + "\n3. Warrior"
-    + "\n4. Ditcher"
-)
-
-if let choice = readLine() {
-    switch choice {
-    case "1":
-        print("Good choice, your character is a female, give her a name")
-        break
-    case "2":
-        print("Good choice, your character is a male, give him a name")
-        break
-    case "3":
-        print("Good choice, your character is a female, give her a name")
-        break
-    case "4":
-        print("Good choice, your character is a male, give him a name")
-        break
-    default:
-        print("This choice is not possible, try again")
-    }
-}
-
-print("Choisis ton dernier personnage :"
-    + "\n1. Enchantress"
-    + "\n2. Druid"
-    + "\n3. Warrior"
-    + "\n4. Ditcher"
-)
-
-if let choice = readLine() {
-    switch choice {
-    case "1":
-        print("Good choice, your character is a female, give her a name")
-        break
-    case "2":
-        print("Good choice, your character is a male, give him a name")
-        break
-    case "3":
-        print("Good choice, your character is a female, give her a name")
-        break
-    case "4":
-        print("Good choice, your character is a male, give him a name")
-        break
-    default:
-        print("This choice is not possible, try again")
+    print("Choisis ton dernier personnage :"
+        + "\n1. Enchantress"
+        + "\n2. Druid"
+        + "\n3. Warrior"
+        + "\n4. Ditcher"
+    )
+    if let choice = readLine() {
+        switch choice {
+        case "1":
+            print("Good choice, your character is a female, give her a name")
+        case "2":
+            print("Good choice, your character is a male, give him a name")
+        case "3":
+            print("Good choice, your character is a female, give her a name")
+        case "4":
+            print("Good choice, your character is a male, give him a name")
+        default:
+            print("This choice is not possible, try again")
+        }
     }
 }
 /*func input() -> Int {
