@@ -16,5 +16,3 @@ class Player {
     }
 }
 
-var player1 = Player(name: "Olga")
-var player2 = Player(name: "Dimitri")
