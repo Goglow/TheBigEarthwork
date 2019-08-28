@@ -66,6 +66,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		834419C42316EB7F00C9C0D5 /* Chest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Chest;
+			sourceTree = "<group>";
+		};
 		8386A09D230EEEA600FA0688 /* Arm */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +111,7 @@
 				8389A4C1230B9DB7005CA4FB /* arm.swift */,
 				8386A09D230EEEA600FA0688 /* Arm */,
 				83F8A86E230C252300905D09 /* chest.swift */,
+				834419C42316EB7F00C9C0D5 /* Chest */,
 			);
 			path = TheBigEarthwork;
 			sourceTree = "<group>";
