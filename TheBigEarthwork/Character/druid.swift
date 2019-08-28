@@ -9,3 +9,9 @@
 import Foundation
 
 // The druid is a wise man, the plants have no secrets for him.
+
+class Druid: Character {
+    init(characterName: String) {
+        super.init(characterName: characterName, gender: .male, life: 110, arm: Potion())
+    }
+}

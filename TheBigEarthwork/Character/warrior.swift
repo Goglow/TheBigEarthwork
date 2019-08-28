@@ -9,3 +9,9 @@
 import Foundation
 
 // The warrior is a strong woman who handles weapons well.
+
+class Warrior: Character {
+    init(characterName: String) {
+        super.init(characterName: characterName, gender: .female, life: 120, arm: Sword())
+    }
+}

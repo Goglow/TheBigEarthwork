@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+class Player {
+    var name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+}
+
+var player1 = Player(name: "Olga")
+var player2 = Player(name: "Dimitri")
