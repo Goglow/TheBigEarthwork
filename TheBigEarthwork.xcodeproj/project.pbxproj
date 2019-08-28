@@ -69,7 +69,6 @@
 		8386A09D230EEEA600FA0688 /* Arm */ = {
 			isa = PBXGroup;
 			children = (
-				8389A4C1230B9DB7005CA4FB /* arm.swift */,
 				8389A4CB230B9DB8005CA4FB /* philter.swift */,
 				8389A4CE230B9DB8005CA4FB /* potion.swift */,
 				8389A4C4230B9DB7005CA4FB /* sword.swift */,
@@ -98,9 +97,11 @@
 			isa = PBXGroup;
 			children = (
 				8389A49A230B953A005CA4FB /* main.swift */,
-				8389A4C8230B9DB8005CA4FB /* player.swift */,
 				83F8A872230C45C000905D09 /* game.swift */,
+				8389A4C8230B9DB8005CA4FB /* player.swift */,
+				8389A4C6230B9DB7005CA4FB /* character.swift */,
 				83BF6575230F3E2900B859AA /* Character */,
+				8389A4C1230B9DB7005CA4FB /* arm.swift */,
 				8386A09D230EEEA600FA0688 /* Arm */,
 				83F8A86E230C252300905D09 /* chest.swift */,
 			);
@@ -110,7 +111,6 @@
 		83BF6575230F3E2900B859AA /* Character */ = {
 			isa = PBXGroup;
 			children = (
-				8389A4C6230B9DB7005CA4FB /* character.swift */,
 				83F8A870230C2B4E00905D09 /* gender.swift */,
 				8389A4C3230B9DB7005CA4FB /* enchantress.swift */,
 				8389A4CC230B9DB8005CA4FB /* druid.swift */,

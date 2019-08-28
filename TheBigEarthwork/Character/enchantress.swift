@@ -11,13 +11,7 @@ import Foundation
 // The enchantress is a woman whose power is seduction.
 
 class Enchanteress: Character {
-    var arm = Philter()
-    
-    init() {
-        super.init(characterName: "Empimena", gender: .female, life: 120)
-    }
-    
-    init(name: String) {
-        super.init(characterName: name, gender: .female, life: 120)
+    init(characterName: String) {
+        super.init(characterName: characterName, gender: .female, life: 120, arm: Philter())
     }
 }

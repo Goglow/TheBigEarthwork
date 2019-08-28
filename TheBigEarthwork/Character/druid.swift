@@ -11,13 +11,7 @@ import Foundation
 // The druid is a wise man, the plants have no secrets for him.
 
 class Druid: Character {
-    var arm = Potion()
-    
-    init() {
-        super.init(characterName: "Thales", gender: .male, life: 110)
-    }
-    
-    init(name: String) {
-        super.init(characterName: name, gender: .male, life: 110)
+    init(characterName: String) {
+        super.init(characterName: characterName, gender: .male, life: 110, arm: Potion())
     }
 }
