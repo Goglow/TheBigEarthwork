@@ -9,7 +9,7 @@
 import Foundation
 // Quand le jeu commence, les joueurs se présentent un après l'autre
 
-func playerIntroduce(player: Player) {
+/*func playerIntroduce(player: Player) {
     print("Hello Player 1 ! What is your name?")
     if let player1 = readLine() {
         print("It's ok, \(player1)")
@@ -23,7 +23,7 @@ func playerIntroduce(player: Player) {
 // Après la présentation, les joueurs composent leur équipe tour à tour
 
 func playerCreateTeam(player: Player) {
-    print("\(player1), composes ton équipe !"
+    print("\(playerNumber), composes ton équipe !"
         + "\n Choisis ton premier personnage :"
         + "\n1. Enchantress"
         + "\n2. Druid"
@@ -84,7 +84,8 @@ func playerCreateTeam(player: Player) {
         }
     }
 }
-/*func input() -> Int {
+
+ func input() -> Int {
     let strData = readLine()
     
     return Int(strData!)!
