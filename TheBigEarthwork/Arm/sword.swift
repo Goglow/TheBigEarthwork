@@ -12,6 +12,6 @@ import Foundation
 
 class Sword: Arm {
     init() {
-        super.init(damage: 35, repair: 5)
+        super.init(damage: 30, repair: 10)
     }
 }

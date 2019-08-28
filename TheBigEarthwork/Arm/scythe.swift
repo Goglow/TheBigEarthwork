@@ -12,6 +12,6 @@ import Foundation
 
 class Scythe: Arm {
     init() {
-        super.init(damage: 50, repair: 0)
+        super.init(damage: 45, repair: 5)
     }
 }
