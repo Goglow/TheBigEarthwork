@@ -21,7 +21,7 @@ class Player {
         self.playerName = playerName
     }
     
-    func introduceYourSelf() {
+    func introduceYouSelf() {
         print("What is your name, \(playerNumber)?")
         if let playerName = readLine() {
             self.playerName = playerName
