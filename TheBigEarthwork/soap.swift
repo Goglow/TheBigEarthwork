@@ -1,5 +1,5 @@
 //
-//  boomerang.swift
+//  soap.swift
 //  TheBigEarthwork
 //
 //  Created by Waggle Glow on 29/08/2019.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-// Chest : bonus
-// Damage
+// Chest: bonus
+// Repair
 
-class Mace: Arm {
+class Soap: Arm {
     init() {
-        super.init(damage: 50, repair: 0)
+        super.init(damage: 0, repair: 50)
     }
 }
