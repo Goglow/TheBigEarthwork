@@ -116,7 +116,7 @@
 				8389A4C1230B9DB7005CA4FB /* arm.swift */,
 				8386A09D230EEEA600FA0688 /* Arm */,
 				83F8A86E230C252300905D09 /* chest.swift */,
-				96F3A5EF2317D6B800572992 /* SurpriseChest */,
+				96F3A5EF2317D6B800572992 /* Chest */,
 			);
 			path = TheBigEarthwork;
 			sourceTree = "<group>";
@@ -153,13 +153,13 @@
 			path = malus;
 			sourceTree = "<group>";
 		};
-		96F3A5EF2317D6B800572992 /* SurpriseChest */ = {
+		96F3A5EF2317D6B800572992 /* Chest */ = {
 			isa = PBXGroup;
 			children = (
 				96F3A5ED2317D2B200572992 /* bonus */,
 				96F3A5EE2317D2D900572992 /* malus */,
 			);
-			path = SurpriseChest;
+			path = Chest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
