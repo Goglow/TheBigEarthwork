@@ -22,12 +22,12 @@
 		83F8A86F230C252300905D09 /* chest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8A86E230C252300905D09 /* chest.swift */; };
 		83F8A871230C2B4E00905D09 /* gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8A870230C2B4E00905D09 /* gender.swift */; };
 		83F8A873230C45C000905D09 /* game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8A872230C45C000905D09 /* game.swift */; };
-		96F3A5E12317D03E00572992 /* bow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3A5E02317D03E00572992 /* bow.swift */; };
-		96F3A5E92317D0DC00572992 /* slingshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3A5E82317D0DC00572992 /* slingshot.swift */; };
-		96F3A5EB2317D0F700572992 /* moonstone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3A5EA2317D0F700572992 /* moonstone.swift */; };
 		96F3A5F12317D80C00572992 /* boomerang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3A5F02317D80C00572992 /* boomerang.swift */; };
 		96F3A5F32317D8C100572992 /* mace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3A5F22317D8C100572992 /* mace.swift */; };
 		96F3A5F72317D95C00572992 /* soap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3A5F62317D95C00572992 /* soap.swift */; };
+		96F3A5F92317D9A900572992 /* bow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3A5F82317D9A900572992 /* bow.swift */; };
+		96F3A5FB2317D9E600572992 /* slingshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3A5FA2317D9E600572992 /* slingshot.swift */; };
+		96F3A5FD2317DA1700572992 /* moonstone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3A5FC2317DA1700572992 /* moonstone.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,12 +59,12 @@
 		83F8A86E230C252300905D09 /* chest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chest.swift; sourceTree = "<group>"; };
 		83F8A870230C2B4E00905D09 /* gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gender.swift; sourceTree = "<group>"; };
 		83F8A872230C45C000905D09 /* game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = game.swift; sourceTree = "<group>"; };
-		96F3A5E02317D03E00572992 /* bow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = bow.swift; path = TheBigEarthwork/malus/bow.swift; sourceTree = SOURCE_ROOT; };
-		96F3A5E82317D0DC00572992 /* slingshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = slingshot.swift; path = TheBigEarthwork/malus/slingshot.swift; sourceTree = SOURCE_ROOT; };
-		96F3A5EA2317D0F700572992 /* moonstone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = moonstone.swift; path = TheBigEarthwork/malus/moonstone.swift; sourceTree = SOURCE_ROOT; };
 		96F3A5F02317D80C00572992 /* boomerang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = boomerang.swift; path = ../boomerang.swift; sourceTree = "<group>"; };
 		96F3A5F22317D8C100572992 /* mace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = mace.swift; path = ../../Arm/mace.swift; sourceTree = "<group>"; };
 		96F3A5F62317D95C00572992 /* soap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = soap.swift; path = ../../soap.swift; sourceTree = "<group>"; };
+		96F3A5F82317D9A900572992 /* bow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = bow.swift; path = ../bow.swift; sourceTree = "<group>"; };
+		96F3A5FA2317D9E600572992 /* slingshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = slingshot.swift; path = ../slingshot.swift; sourceTree = "<group>"; };
+		96F3A5FC2317DA1700572992 /* moonstone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = moonstone.swift; path = ../moonstone.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,9 +146,9 @@
 		96F3A5EE2317D2D900572992 /* malus */ = {
 			isa = PBXGroup;
 			children = (
-				96F3A5E02317D03E00572992 /* bow.swift */,
-				96F3A5E82317D0DC00572992 /* slingshot.swift */,
-				96F3A5EA2317D0F700572992 /* moonstone.swift */,
+				96F3A5F82317D9A900572992 /* bow.swift */,
+				96F3A5FA2317D9E600572992 /* slingshot.swift */,
+				96F3A5FC2317DA1700572992 /* moonstone.swift */,
 			);
 			path = malus;
 			sourceTree = "<group>";
@@ -223,7 +223,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8389A4D0230B9DB9005CA4FB /* arm.swift in Sources */,
-				96F3A5E12317D03E00572992 /* bow.swift in Sources */,
 				83F8A86F230C252300905D09 /* chest.swift in Sources */,
 				8389A4D5230B9DB9005CA4FB /* character.swift in Sources */,
 				8389A4D4230B9DB9005CA4FB /* ditcher.swift in Sources */,
@@ -236,12 +235,13 @@
 				8389A4D2230B9DB9005CA4FB /* enchantress.swift in Sources */,
 				96F3A5F72317D95C00572992 /* soap.swift in Sources */,
 				8389A4D1230B9DB9005CA4FB /* scythe.swift in Sources */,
+				96F3A5F92317D9A900572992 /* bow.swift in Sources */,
 				8389A4DA230B9DB9005CA4FB /* philter.swift in Sources */,
 				8389A4DD230B9DB9005CA4FB /* potion.swift in Sources */,
 				8389A4D6230B9DB9005CA4FB /* warrior.swift in Sources */,
-				96F3A5E92317D0DC00572992 /* slingshot.swift in Sources */,
+				96F3A5FB2317D9E600572992 /* slingshot.swift in Sources */,
 				8389A4D3230B9DB9005CA4FB /* sword.swift in Sources */,
-				96F3A5EB2317D0F700572992 /* moonstone.swift in Sources */,
+				96F3A5FD2317DA1700572992 /* moonstone.swift in Sources */,
 				83F8A873230C45C000905D09 /* game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
