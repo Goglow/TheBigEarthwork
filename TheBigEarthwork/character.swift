@@ -17,4 +17,19 @@ class Character {
         self.name = name
         self.arm = arm
     }
+    
+    func giveDamage(target: Character, damage: Int) {
+        life -= damage
+        
+        if life <= 0 {
+            print("Votre personnage est mort ! Vous ne pouvez plus l'utiliser !")
+            //            listOfPlayer1.remove()
+        } else {
+            print("Le niveau de vie de votre personnage est de \(life)")
+        }
+    }
+    
+    func giveRepair(target: Character, repair: Int) {
+        life += repair
+    }
 }
