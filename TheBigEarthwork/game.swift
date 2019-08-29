@@ -9,9 +9,14 @@ class Game {
         self.player2 = player2
     }
     
+// Le jeu commence par une introduction et une demande de confirmation aux joueurs pour démarrer.
     func startGame() {
+        introduction()
+        confirmation()
+// Ensuite les joueurs se présentent tour à tour.
         player1.introduceYourSelf()
         player2.introduceYourSelf()
+// Ils créent leur équipe tour à tour et nomment leurs personnages par la même occasion.
         player1.createYourTeam()
         player1.introduceYourPlayers()
         player2.createYourTeam()
@@ -19,7 +24,32 @@ class Game {
     }
 }
 
-// La partie commence en demandant aux joueurs de se présenter, quand c'est fait. Il leur est alors demandé s'ils sont prêts à commencer la partie !
+func introduction() {
+    print(
+        """
+                    The World is in the throes of a merciless war. There are no more good guys, no more bad guys, everyone is fighting endlessly...
+                    A last fight can save the World, and you will lead it.
+                                Welcome to The Big EarthWork !
+"""
+    )}
+
+func confirmation() {
+    print("Are you ready to start the game ? (yes or no)")
+    if let choiceAnswer = readLine() {
+        switch choiceAnswer {
+        case "yes":
+            print("Allons-y !")
+        case "no":
+            print("A une prochaine fois !")
+        default:
+            print("Je ne comprends pas votre choix !")
+        }
+    }
+}
+
+
+
+// La partie commence en demandant aux joueurs de se présenter, quand c'est fait. Un message apparaît pour leur demander s'ils sont prêts à commencer la partie.
 
 /* Bonjour \(joueur1), Bonjour \(joueur2),
  
