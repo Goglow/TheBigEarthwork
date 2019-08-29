@@ -27,4 +27,24 @@ class Player {
             self.playerName = playerName
         }
     }
+    // Quand le jeu commence, les joueurs se présentent un après l'autre
+    
+    func introduceYourSelf() {
+        let listOfPlayers = [playerNumber: 1, playerNumber: 2]
+        for _ in listOfPlayers {
+            print("Hello player \(playerNumber)! What is your name?")
+            if let playerName = readLine() {
+                print("It's ok!")
+                self.playerName = playerName
+            }
+        }
+    }
+    
+    func createYourTeam() {
+        
+    }
+    
+    func introduceYourPlayers() {
+        
+    }
 }
