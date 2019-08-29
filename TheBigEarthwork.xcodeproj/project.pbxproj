@@ -23,6 +23,7 @@
 		83F8A871230C2B4E00905D09 /* gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8A870230C2B4E00905D09 /* gender.swift */; };
 		83F8A873230C45C000905D09 /* game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8A872230C45C000905D09 /* game.swift */; };
 		96F3A5DF2317CFFD00572992 /* boomerang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3A5DE2317CFFD00572992 /* boomerang.swift */; };
+		96F3A5E12317D03E00572992 /* bow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3A5E02317D03E00572992 /* bow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +56,7 @@
 		83F8A870230C2B4E00905D09 /* gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gender.swift; sourceTree = "<group>"; };
 		83F8A872230C45C000905D09 /* game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = game.swift; sourceTree = "<group>"; };
 		96F3A5DE2317CFFD00572992 /* boomerang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = boomerang.swift; path = TheBigEarthwork/boomerang.swift; sourceTree = SOURCE_ROOT; };
+		96F3A5E02317D03E00572992 /* bow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = bow.swift; path = TheBigEarthwork/bow.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				96F3A5DE2317CFFD00572992 /* boomerang.swift */,
+				96F3A5E02317D03E00572992 /* bow.swift */,
 			);
 			path = Chest;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8389A4D0230B9DB9005CA4FB /* arm.swift in Sources */,
+				96F3A5E12317D03E00572992 /* bow.swift in Sources */,
 				83F8A86F230C252300905D09 /* chest.swift in Sources */,
 				8389A4D5230B9DB9005CA4FB /* character.swift in Sources */,
 				8389A4D4230B9DB9005CA4FB /* ditcher.swift in Sources */,
