@@ -11,22 +11,20 @@ import Foundation
 // Create a class "Player"
 
 class Player {
+    
     // This number is for identify the player (e.g. player1 or player2)
+    
     var playerNumber: Int
+    
     // For personalize the game party, the players have their names
+    
     var playerName: String
     
     init(playerNumber: Int, playerName: String) {
         self.playerNumber = playerNumber
         self.playerName = playerName
     }
-    
-    func introduceYouSelf() {
-        print("What is your name, \(playerNumber)?")
-        if let playerName = readLine() {
-            self.playerName = playerName
-        }
-    }
+
     // Quand le jeu commence, les joueurs se présentent un après l'autre
     
     func introduceYourSelf() {
