@@ -1,5 +1,5 @@
 //
-//  boomerang.swift
+//  bow.swift
 //  TheBigEarthwork
 //
 //  Created by Waggle Glow on 29/08/2019.
@@ -8,12 +8,11 @@
 
 import Foundation
 
+// Chest: malus
+// Damage + repair
 
-// Chest : bonus
-// Damage + Repair
-
-class Boomerang: Arm {
+class Bow: Arm {
     init() {
-        super.init(damage: 25, repair: 25)
+        super.init(damage: 5, repair: 5)
     }
 }

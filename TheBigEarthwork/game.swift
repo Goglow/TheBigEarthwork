@@ -8,6 +8,25 @@
 
 import Foundation
 
+class Game {
+    var player1: Player
+    var player2: Player
+    
+    init(player1: Player, player2: Player) {
+        self.player1 = player1
+        self.player2 = player2
+    }
+    
+    func startGame() {
+        player1.introduceYourSelf()
+        player2.introduceYourSelf()
+        player1.createYourTeam()
+        player1.introduceYourPlayers()
+        player2.createYourTeam()
+        player2.introduceYourPlayers()
+    }
+}
+
 // La partie commence en demandant aux joueurs de se présenter, quand c'est fait. Il leur est alors demandé s'ils sont prêts à commencer la partie !
 
 /* Bonjour \(joueur1), Bonjour \(joueur2),

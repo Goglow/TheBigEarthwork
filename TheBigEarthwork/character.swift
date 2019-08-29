@@ -9,15 +9,27 @@
 import Foundation
 
 class Character {
-    var characterName: String
-    var gender: Gender
-    var life: Int
+    var name: String
+    var life = 100
     var arm: Arm
     
-    init(characterName: String, gender: Gender, life: Int, arm: Arm) {
-        self.characterName = characterName
-        self.gender = gender
-        self.life = life
+    init(name: String, arm: Arm) {
+        self.name = name
         self.arm = arm
+    }
+    
+    func giveDamage(target: Character, damage: Int) {
+        life -= damage
+        
+        if life <= 0 {
+            print("Votre personnage est mort ! Vous ne pouvez plus l'utiliser !")
+            //            listOfPlayer1.remove()
+        } else {
+            print("Le niveau de vie de votre personnage est de \(life)")
+        }
+    }
+    
+    func giveRepair(target: Character, repair: Int) {
+        life += repair
     }
 }
