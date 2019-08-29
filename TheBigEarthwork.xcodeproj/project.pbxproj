@@ -59,12 +59,12 @@
 		83F8A86E230C252300905D09 /* chest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chest.swift; sourceTree = "<group>"; };
 		83F8A870230C2B4E00905D09 /* gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gender.swift; sourceTree = "<group>"; };
 		83F8A872230C45C000905D09 /* game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = game.swift; sourceTree = "<group>"; };
-		96F3A5DE2317CFFD00572992 /* boomerang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = boomerang.swift; path = TheBigEarthwork/boomerang.swift; sourceTree = SOURCE_ROOT; };
-		96F3A5E02317D03E00572992 /* bow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = bow.swift; path = TheBigEarthwork/bow.swift; sourceTree = SOURCE_ROOT; };
-		96F3A5E42317D08A00572992 /* mace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = mace.swift; path = TheBigEarthwork/mace.swift; sourceTree = SOURCE_ROOT; };
-		96F3A5E62317D0BD00572992 /* soap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = soap.swift; path = TheBigEarthwork/soap.swift; sourceTree = SOURCE_ROOT; };
-		96F3A5E82317D0DC00572992 /* slingshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = slingshot.swift; path = TheBigEarthwork/slingshot.swift; sourceTree = SOURCE_ROOT; };
-		96F3A5EA2317D0F700572992 /* moonstone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = moonstone.swift; path = TheBigEarthwork/moonstone.swift; sourceTree = SOURCE_ROOT; };
+		96F3A5DE2317CFFD00572992 /* boomerang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = boomerang.swift; path = TheBigEarthwork/SurpriseChest/bonus/boomerang.swift; sourceTree = SOURCE_ROOT; };
+		96F3A5E02317D03E00572992 /* bow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = bow.swift; path = TheBigEarthwork/malus/bow.swift; sourceTree = SOURCE_ROOT; };
+		96F3A5E42317D08A00572992 /* mace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = mace.swift; path = TheBigEarthwork/SurpriseChest/bonus/mace.swift; sourceTree = SOURCE_ROOT; };
+		96F3A5E62317D0BD00572992 /* soap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = soap.swift; path = TheBigEarthwork/SurpriseChest/bonus/soap.swift; sourceTree = SOURCE_ROOT; };
+		96F3A5E82317D0DC00572992 /* slingshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = slingshot.swift; path = TheBigEarthwork/malus/slingshot.swift; sourceTree = SOURCE_ROOT; };
+		96F3A5EA2317D0F700572992 /* moonstone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = moonstone.swift; path = TheBigEarthwork/malus/moonstone.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,21 +78,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		834419C42316EB7F00C9C0D5 /* Chest */ = {
-			isa = PBXGroup;
-			children = (
-				96F3A5ED2317D2B200572992 /* bonus */,
-				96F3A5DE2317CFFD00572992 /* boomerang.swift */,
-				96F3A5E42317D08A00572992 /* mace.swift */,
-				96F3A5E62317D0BD00572992 /* soap.swift */,
-				96F3A5EE2317D2D900572992 /* malus */,
-				96F3A5E02317D03E00572992 /* bow.swift */,
-				96F3A5E82317D0DC00572992 /* slingshot.swift */,
-				96F3A5EA2317D0F700572992 /* moonstone.swift */,
-			);
-			path = Chest;
-			sourceTree = "<group>";
-		};
 		8386A09D230EEEA600FA0688 /* Arm */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,7 +116,7 @@
 				8389A4C1230B9DB7005CA4FB /* arm.swift */,
 				8386A09D230EEEA600FA0688 /* Arm */,
 				83F8A86E230C252300905D09 /* chest.swift */,
-				834419C42316EB7F00C9C0D5 /* Chest */,
+				96F3A5EF2317D6B800572992 /* SurpriseChest */,
 			);
 			path = TheBigEarthwork;
 			sourceTree = "<group>";
@@ -151,6 +136,9 @@
 		96F3A5ED2317D2B200572992 /* bonus */ = {
 			isa = PBXGroup;
 			children = (
+				96F3A5DE2317CFFD00572992 /* boomerang.swift */,
+				96F3A5E42317D08A00572992 /* mace.swift */,
+				96F3A5E62317D0BD00572992 /* soap.swift */,
 			);
 			path = bonus;
 			sourceTree = "<group>";
@@ -158,8 +146,20 @@
 		96F3A5EE2317D2D900572992 /* malus */ = {
 			isa = PBXGroup;
 			children = (
+				96F3A5E02317D03E00572992 /* bow.swift */,
+				96F3A5E82317D0DC00572992 /* slingshot.swift */,
+				96F3A5EA2317D0F700572992 /* moonstone.swift */,
 			);
 			path = malus;
+			sourceTree = "<group>";
+		};
+		96F3A5EF2317D6B800572992 /* SurpriseChest */ = {
+			isa = PBXGroup;
+			children = (
+				96F3A5ED2317D2B200572992 /* bonus */,
+				96F3A5EE2317D2D900572992 /* malus */,
+			);
+			path = SurpriseChest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
