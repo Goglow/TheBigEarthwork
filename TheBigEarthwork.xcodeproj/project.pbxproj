@@ -81,9 +81,11 @@
 		834419C42316EB7F00C9C0D5 /* Chest */ = {
 			isa = PBXGroup;
 			children = (
+				96F3A5ED2317D2B200572992 /* bonus */,
 				96F3A5DE2317CFFD00572992 /* boomerang.swift */,
 				96F3A5E42317D08A00572992 /* mace.swift */,
 				96F3A5E62317D0BD00572992 /* soap.swift */,
+				96F3A5EE2317D2D900572992 /* malus */,
 				96F3A5E02317D03E00572992 /* bow.swift */,
 				96F3A5E82317D0DC00572992 /* slingshot.swift */,
 				96F3A5EA2317D0F700572992 /* moonstone.swift */,
@@ -144,6 +146,20 @@
 				8389A4C5230B9DB7005CA4FB /* ditcher.swift */,
 			);
 			path = Character;
+			sourceTree = "<group>";
+		};
+		96F3A5ED2317D2B200572992 /* bonus */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = bonus;
+			sourceTree = "<group>";
+		};
+		96F3A5EE2317D2D900572992 /* malus */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = malus;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
