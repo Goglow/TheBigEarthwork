@@ -16,7 +16,7 @@ class Player {
     }
     // Quand le jeu commence, les joueurs se présentent l'un après l'autre
     func introduceYourSelf() {
-        print("Hello player \(playerNumber)! What is your name?")
+        print("Hello player n°\(playerNumber)! What is your name?")
         if let playerName = readLine() {
             self.playerName = playerName
             print("It's ok!")
@@ -25,8 +25,8 @@ class Player {
     // Les joueurs créent leur équipe et nomment leurs personnages
     func createYourTeam() {
         repeat {
-            print("\(playerNumber), composes ton équipe !"
-                + "\n Choisis ton personnage n° \(team.count + 1) :"
+            print("Player n°\(playerNumber), composes ton équipe !"
+                + "\n Choisis ton personnage n°\(team.count + 1) :"
                 + "\n1. Enchantress"
                 + "\n2. Druid"
                 + "\n3. Warrior"
@@ -37,27 +37,27 @@ class Player {
                     print("Good choice, your character is a female, give her a name")
                     // Demander au joueur de donner un nom au personnage choisi
                     if let name = readLine() {
-                        var character = Enchanteress(name: name)
+                        let character = Enchanteress(name: name)
+                        team.append(character)
                     }
-                    team.append(character)
                 case "2":
                     print("Good choice, your character is a male, give him a name")
                     if let name = readLine() {
-                        var character = Druid(name: name)
+                        let character = Druid(name: name)
+                        team.append(character)
                     }
-                    team.append(character)
                 case "3":
                     print("Good choice, your character is a female, give her a name")
                     if let name = readLine() {
-                        var character = Warrior(name: name)
-                    }
+                        let character = Warrior(name: name)
                     team.append(character)
+                    }
                 case "4":
                     print("Good choice, your character is a male, give him a name")
                     if let name = readLine() {
-                        var character = Ditcher(name: name)
-                    }
+                        let character = Ditcher(name: name)
                     team.append(character)
+                    }
                 default:
                     print("This choice is not possible, try again")
                 }

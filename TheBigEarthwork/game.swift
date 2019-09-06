@@ -16,8 +16,8 @@ class Game {
         player1.introduceYourSelf()
         player2.introduceYourSelf()
 // Ils créent leur équipe tour à tour et nomment leurs personnages par la même occasion.
-//        player1.createYourTeam()
-//          player2.createYourTeam()
+        player1.createYourTeam()
+        player2.createYourTeam()
     }
 }
 
