@@ -22,7 +22,7 @@ class Game {
 }
 
 func introduction() {
-    print("The World is in the throes of a merciless war. There are no more good guys, no more bad guys, everyone is fighting endlessly... A last fight can save the World, and you will lead it. Welcome to The Big EarthWork ! \n")
+    print("The World is in the throes of a merciless war. There are no more good guys, no more bad guys, everyone is fighting endlessly... A last fight can save the World, and you will lead it. Welcome to The Big EarthWork !")
 }
 
 func confirmation() {

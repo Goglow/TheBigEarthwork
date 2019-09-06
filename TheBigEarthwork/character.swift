@@ -15,7 +15,7 @@ class Character {
         
         if life <= 0 {
             print("Votre personnage est mort ! Vous ne pouvez plus l'utiliser !")
-            //            listOfPlayer1.remove()
+                // team.remove(character)
         } else {
             print("Le niveau de vie de votre personnage est de \(life)")
         }
