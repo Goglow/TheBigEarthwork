@@ -25,8 +25,7 @@ class Player {
     // Les joueurs créent leur équipe et nomment leurs personnages
     func createYourTeam() {
         repeat {
-            print("Player n°\(playerNumber), composes ton équipe !"
-                + "\n Choisis ton personnage n°\(team.count + 1) :"
+            print("Player n°\(playerNumber), choice your character n°\(team.count + 1) :"
                 + "\n1. Enchantress"
                 + "\n2. Druid"
                 + "\n3. Warrior"
