@@ -59,12 +59,12 @@
 		83F8A86E230C252300905D09 /* chest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chest.swift; sourceTree = "<group>"; };
 		83F8A870230C2B4E00905D09 /* gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gender.swift; sourceTree = "<group>"; };
 		83F8A872230C45C000905D09 /* game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = game.swift; sourceTree = "<group>"; };
-		96F3A5F02317D80C00572992 /* boomerang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = boomerang.swift; path = ../boomerang.swift; sourceTree = "<group>"; };
-		96F3A5F22317D8C100572992 /* mace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = mace.swift; path = ../../Arm/mace.swift; sourceTree = "<group>"; };
-		96F3A5F62317D95C00572992 /* soap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = soap.swift; path = ../../soap.swift; sourceTree = "<group>"; };
-		96F3A5F82317D9A900572992 /* bow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = bow.swift; path = ../bow.swift; sourceTree = "<group>"; };
-		96F3A5FA2317D9E600572992 /* slingshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = slingshot.swift; path = ../slingshot.swift; sourceTree = "<group>"; };
-		96F3A5FC2317DA1700572992 /* moonstone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = moonstone.swift; path = ../moonstone.swift; sourceTree = "<group>"; };
+		96F3A5F02317D80C00572992 /* boomerang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boomerang.swift; sourceTree = "<group>"; };
+		96F3A5F22317D8C100572992 /* mace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mace.swift; sourceTree = "<group>"; };
+		96F3A5F62317D95C00572992 /* soap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = soap.swift; sourceTree = "<group>"; };
+		96F3A5F82317D9A900572992 /* bow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bow.swift; sourceTree = "<group>"; };
+		96F3A5FA2317D9E600572992 /* slingshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = slingshot.swift; sourceTree = "<group>"; };
+		96F3A5FC2317DA1700572992 /* moonstone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moonstone.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,31 +133,15 @@
 			path = Character;
 			sourceTree = "<group>";
 		};
-		96F3A5ED2317D2B200572992 /* bonus */ = {
+		96F3A5EF2317D6B800572992 /* Chest */ = {
 			isa = PBXGroup;
 			children = (
 				96F3A5F02317D80C00572992 /* boomerang.swift */,
 				96F3A5F22317D8C100572992 /* mace.swift */,
 				96F3A5F62317D95C00572992 /* soap.swift */,
-			);
-			path = bonus;
-			sourceTree = "<group>";
-		};
-		96F3A5EE2317D2D900572992 /* malus */ = {
-			isa = PBXGroup;
-			children = (
 				96F3A5F82317D9A900572992 /* bow.swift */,
 				96F3A5FA2317D9E600572992 /* slingshot.swift */,
 				96F3A5FC2317DA1700572992 /* moonstone.swift */,
-			);
-			path = malus;
-			sourceTree = "<group>";
-		};
-		96F3A5EF2317D6B800572992 /* Chest */ = {
-			isa = PBXGroup;
-			children = (
-				96F3A5ED2317D2B200572992 /* bonus */,
-				96F3A5EE2317D2D900572992 /* malus */,
 			);
 			path = Chest;
 			sourceTree = "<group>";
