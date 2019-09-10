@@ -1,18 +1,37 @@
 import Foundation
 
+// Create a class "Character"
+
 class Character {
     var name: String
-    var life = 100
+    var life: Int
     var arm: Arm
+    var gender: Gender
+    var power: Power
     
     static var names = [String]()
     
-    init(name: String, arm: Arm) {
+    init(name: String, life: Int, arm: Arm, gender: Gender, power: Power) {
         self.name = name
+        self.life = life
         self.arm = arm
+        self.gender = gender
+        self.power = power
     }
     
-    func giveDamage(target: Character, damage: Int) {
+    static func addName() -> String {
+        if let name = readLine() {
+            if !Character.names.contains(name.uppercased()) {
+                Character.names.append(name.uppercased())
+                return name
+            } else {
+                print("Ce nom est déjà pris")
+            }
+        }
+        return addName()
+    }
+    
+/*    func giveDamage(target: Character, damage: Int) {
         life -= damage
         
         if life <= 0 {
@@ -25,17 +44,5 @@ class Character {
     
     func giveRepair(target: Character, repair: Int) {
         life += repair
-    }
-    
-    static func addName() -> String {
-        if let name = readLine() {
-            if !Character.names.contains(name.uppercased()) {
-                Character.names.append(name.uppercased())
-                return name
-            } else {
-            print("Ce nom est déjà pris")
-        }
-    }
-        return addName()
-    }
+    } */
 }

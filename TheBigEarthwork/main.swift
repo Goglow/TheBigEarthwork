@@ -8,4 +8,4 @@ import Foundation
 
 var game = Game(player1: Player(playerNumber: 1), player2: Player(playerNumber: 2))
 
-game.startGame()
+game.displayMenu()

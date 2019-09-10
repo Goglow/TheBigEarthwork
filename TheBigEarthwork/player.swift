@@ -3,18 +3,18 @@ import Foundation
 // Create a class "Player"
 
 class Player {
-    // This number is for identify the player
+// This number is for identify the player.
     var playerNumber: Int
-    // For personalize the game party, the players have their names
+// For personalize the game party, the players have their names.
     var playerName: String
-    // Player's team
+// Player's team
     var team = [Character]()
     
     init(playerNumber: Int) {
         self.playerNumber = playerNumber
         self.playerName = ""
     }
-    // Quand le jeu commence, les joueurs se présentent l'un après l'autre
+// The players introduce themselves in turn.
     func introduceYourSelf() {
         print("Hello player n°\(playerNumber)! What is your name?")
         if let playerName = readLine() {
@@ -22,7 +22,7 @@ class Player {
             print("It's ok!")
         }
     }
-    // Les joueurs créent leur équipe et nomment leurs personnages
+// They each create their team and name their characters.
     func createYourTeam() {
         repeat {
             print("Player n°\(playerNumber), choice your character n°\(team.count + 1) :"
@@ -34,7 +34,7 @@ class Player {
                 switch choice {
                 case "1":
                     print("Good choice, your character is a female, give her a name :")
-                    // Demander au joueur de donner un nom au personnage choisi
+// Ask the player to give a name to the chosen character.
                     let name = Character.addName()
                     let character = Enchanteress(name: name)
                     team.append(character)
@@ -54,7 +54,7 @@ class Player {
                     let character = Ditcher(name: name)
                     team.append(character)
                 default:
-                    print("This choice is not possible, try again")
+                    print("This choice is not possible, please try again !")
                 }
             }
         } while(team.count < 3)

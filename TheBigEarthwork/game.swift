@@ -1,5 +1,7 @@
 import Foundation
 
+// Create a class "Game"
+
 class Game {
     var player1: Player
     var player2: Player
@@ -8,34 +10,47 @@ class Game {
         self.player1 = player1
         self.player2 = player2
     }
-// Le jeu commence par une introduction et une demande de confirmation aux joueurs pour démarrer.
-    func startGame() {
+// The game starts with an introduction and a request for confirmation to the players to start.
+    func displayMenu() {
         introduction()
         confirmation()
-// Ensuite les joueurs se présentent tour à tour.
+    }
+    
+    func start() {
+// The players introduce themselves in turn.
         player1.introduceYourSelf()
         player2.introduceYourSelf()
-// Ils créent leur équipe tour à tour et nomment leurs personnages par la même occasion.
+// They each create their team and name their characters.
         player1.createYourTeam()
         player2.createYourTeam()
     }
-}
+    
+    func introduction() {
+        print("""
+The World is in the throes of a merciless war. There are no more good guys, no more bad guys, everyone is fighting endlessly... A last fight can save the World, and you will lead it. Welcome to The Big EarthWork !
+""")
+    }
 
-func introduction() {
-    print("The World is in the throes of a merciless war. There are no more good guys, no more bad guys, everyone is fighting endlessly... A last fight can save the World, and you will lead it. Welcome to The Big EarthWork !")
-}
-
-func confirmation() {
-    print("Are you ready to start the game ? (yes or no)")
-    if let choiceAnswer = readLine() {
-        switch choiceAnswer {
-        case "yes":
-            print("Allons-y !")
-        case "no":
-            print("A une prochaine fois !")
-            exit(0)
-        default:
-            print("Je ne comprends pas votre choix !")
-        }
+    func confirmation() {
+        var confirm = true
+        repeat {
+            print("""
+A new game will start soon !
+Are you ready to start the game ? (yes or no)
+""")
+            if let choiceAnswer = readLine() {
+                switch choiceAnswer {
+                case "yes":
+                    print("Let's go !")
+                    self.start()
+                case "no":
+                    print("See you next time !")
+                    confirm = false
+                default:
+                    print("I do not understand your choice. Please try again !")
+                }
+            }
+        } while confirm
+        exit(0)
     }
 }
