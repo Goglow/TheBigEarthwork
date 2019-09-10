@@ -4,6 +4,6 @@ import Foundation
 
 class Ditcher: Character {
     init(name: String) {
-        super.init(name: name, life: 110, arm: Scythe(), gender: .male, power: .earth)
+        super.init(name: name, life: 110, weapon: Scythe(), gender: .male, power: .earth)
     }
 }

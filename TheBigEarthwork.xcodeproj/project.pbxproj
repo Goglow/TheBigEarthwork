@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8389A49B230B953A005CA4FB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A49A230B953A005CA4FB /* main.swift */; };
-		8389A4D0230B9DB9005CA4FB /* arm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4C1230B9DB7005CA4FB /* arm.swift */; };
+		8389A4D0230B9DB9005CA4FB /* weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4C1230B9DB7005CA4FB /* weapon.swift */; };
 		8389A4D1230B9DB9005CA4FB /* scythe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4C2230B9DB7005CA4FB /* scythe.swift */; };
 		8389A4D2230B9DB9005CA4FB /* enchantress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4C3230B9DB7005CA4FB /* enchantress.swift */; };
 		8389A4D3230B9DB9005CA4FB /* sword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8389A4C4230B9DB7005CA4FB /* sword.swift */; };
@@ -46,7 +46,7 @@
 /* Begin PBXFileReference section */
 		8389A497230B953A005CA4FB /* TheBigEarthwork */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TheBigEarthwork; sourceTree = BUILT_PRODUCTS_DIR; };
 		8389A49A230B953A005CA4FB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		8389A4C1230B9DB7005CA4FB /* arm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = arm.swift; sourceTree = "<group>"; };
+		8389A4C1230B9DB7005CA4FB /* weapon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weapon.swift; sourceTree = "<group>"; };
 		8389A4C2230B9DB7005CA4FB /* scythe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scythe.swift; sourceTree = "<group>"; };
 		8389A4C3230B9DB7005CA4FB /* enchantress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = enchantress.swift; sourceTree = "<group>"; };
 		8389A4C4230B9DB7005CA4FB /* sword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sword.swift; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8386A09D230EEEA600FA0688 /* Arm */ = {
+		8386A09D230EEEA600FA0688 /* Weapon */ = {
 			isa = PBXGroup;
 			children = (
 				8389A4CB230B9DB8005CA4FB /* philter.swift */,
@@ -88,7 +88,7 @@
 				8389A4C4230B9DB7005CA4FB /* sword.swift */,
 				8389A4C2230B9DB7005CA4FB /* scythe.swift */,
 			);
-			path = Arm;
+			path = Weapon;
 			sourceTree = "<group>";
 		};
 		8389A48E230B953A005CA4FB = {
@@ -115,8 +115,8 @@
 				8389A4C8230B9DB8005CA4FB /* player.swift */,
 				8389A4C6230B9DB7005CA4FB /* character.swift */,
 				83BF6575230F3E2900B859AA /* Character */,
-				8389A4C1230B9DB7005CA4FB /* arm.swift */,
-				8386A09D230EEEA600FA0688 /* Arm */,
+				8389A4C1230B9DB7005CA4FB /* weapon.swift */,
+				8386A09D230EEEA600FA0688 /* Weapon */,
 				83F8A86E230C252300905D09 /* chest.swift */,
 				96F3A5EF2317D6B800572992 /* Chest */,
 			);
@@ -209,7 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8389A4D0230B9DB9005CA4FB /* arm.swift in Sources */,
+				8389A4D0230B9DB9005CA4FB /* weapon.swift in Sources */,
 				83F8A86F230C252300905D09 /* chest.swift in Sources */,
 				8389A4D5230B9DB9005CA4FB /* character.swift in Sources */,
 				8389A4D4230B9DB9005CA4FB /* ditcher.swift in Sources */,

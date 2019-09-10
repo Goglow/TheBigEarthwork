@@ -5,16 +5,16 @@ import Foundation
 class Character {
     var name: String
     var life: Int
-    var arm: Arm
+    var weapon: Weapon
     var gender: Gender
     var power: Power
     
     static var names = [String]()
     
-    init(name: String, life: Int, arm: Arm, gender: Gender, power: Power) {
+    init(name: String, life: Int, weapon: Weapon, gender: Gender, power: Power) {
         self.name = name
         self.life = life
-        self.arm = arm
+        self.weapon = weapon
         self.gender = gender
         self.power = power
     }

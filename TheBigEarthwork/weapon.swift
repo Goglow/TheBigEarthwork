@@ -1,6 +1,6 @@
 import Foundation
 
-class Arm {
+class Weapon {
     var damage: Int
     var repair: Int
     
