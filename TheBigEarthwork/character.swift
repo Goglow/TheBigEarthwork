@@ -5,6 +5,8 @@ class Character {
     var life = 100
     var arm: Arm
     
+    static var names = [String]()
+    
     init(name: String, arm: Arm) {
         self.name = name
         self.arm = arm
@@ -23,5 +25,17 @@ class Character {
     
     func giveRepair(target: Character, repair: Int) {
         life += repair
+    }
+    
+    static func addName() -> String {
+        if let name = readLine() {
+            if !Character.names.contains(name.uppercased()) {
+                Character.names.append(name.uppercased())
+                return name
+            } else {
+            print("Ce nom est déjà pris")
+        }
+    }
+        return addName()
     }
 }

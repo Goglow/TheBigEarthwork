@@ -35,28 +35,24 @@ class Player {
                 case "1":
                     print("Good choice, your character is a female, give her a name :")
                     // Demander au joueur de donner un nom au personnage choisi
-                    if let name = readLine() {
-                        let character = Enchanteress(name: name)
-                        team.append(character)
-                    }
+                    let name = Character.addName()
+                    let character = Enchanteress(name: name)
+                    team.append(character)
                 case "2":
                     print("Good choice, your character is a male, give him a name :")
-                    if let name = readLine() {
-                        let character = Druid(name: name)
-                        team.append(character)
-                    }
+                    let name = Character.addName()
+                    let character = Druid(name: name)
+                    team.append(character)
                 case "3":
                     print("Good choice, your character is a female, give her a name :")
-                    if let name = readLine() {
-                        let character = Warrior(name: name)
-                    team.append(character)
-                    }
+                    let name = Character.addName()
+                    let character = Warrior(name: name)
+                team.append(character)
                 case "4":
                     print("Good choice, your character is a male, give him a name :")
-                    if let name = readLine() {
-                        let character = Ditcher(name: name)
+                    let name = Character.addName()
+                    let character = Ditcher(name: name)
                     team.append(character)
-                    }
                 default:
                     print("This choice is not possible, try again")
                 }
