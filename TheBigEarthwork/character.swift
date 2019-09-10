@@ -25,24 +25,33 @@ class Character {
                 Character.names.append(name.uppercased())
                 return name
             } else {
-                print("Ce nom est déjà pris")
+                print("This name is already taken. Please, choose another name !")
             }
         }
         return addName()
     }
     
-/*    func giveDamage(target: Character, damage: Int) {
-        life -= damage
+    func giveDamage(target: Character) {
+        target.life -= self.weapon.damage
         
         if life <= 0 {
-            print("Votre personnage est mort ! Vous ne pouvez plus l'utiliser !")
-                // team.remove(character)
+            print("Your character is dead, you can't use it anymore !")
+//            let character = Character(name: name, life: life, weapon: weapon, gender: gender, power: power)
+//            Player.team.remove()
         } else {
-            print("Le niveau de vie de votre personnage est de \(life)")
+            print("Now, the life of your character is : \(life) points.")
         }
     }
     
-    func giveRepair(target: Character, repair: Int) {
-        life += repair
-    } */
+    func giveRepair(target: Character) {
+        target.life += self.weapon.repair
+        
+        if life <= 0 {
+            print("Your character is dead, you can't use it anymore !")
+//            let character = Character(name: name, life: life, weapon: weapon, gender: gender, power: power)
+//            Player.team.remove()
+        } else {
+            print("Now, the life of your character is : \(life) points.")
+        }
+    }
 }
