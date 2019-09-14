@@ -8,7 +8,7 @@ class Player {
 // For personalize the game party, the players have their names.
     var playerName: String
 // Player's team
-    static var team = [Character]()
+    var team = [Character]()
     
     init(playerNumber: Int) {
         self.playerNumber = playerNumber
@@ -25,7 +25,7 @@ class Player {
 // They each create their team and name their characters.
     func createYourTeam() {
         repeat {
-            print("Player n°\(playerNumber), choice your character n°\(Player.team.count + 1) :"
+            print("Player n°\(playerNumber), choice your character n°\(team.count + 1) :"
                 + "\n1. Enchantress"
                 + "\n2. Druid"
                 + "\n3. Warrior"
@@ -37,27 +37,27 @@ class Player {
 // Ask the player to give a name to the chosen character.
                     let name = Character.addName()
                     let character = Enchanteress(name: name)
-                    Player.team.append(character)
+                    team.append(character)
                 case "2":
                     print("Good choice, he has the power of the water, give him a name :")
                     let name = Character.addName()
                     let character = Druid(name: name)
-                    Player.team.append(character)
+                    team.append(character)
                 case "3":
                     print("Good choice, she has the power of the air, give her a name :")
                     let name = Character.addName()
                     let character = Warrior(name: name)
-                    Player.team.append(character)
+                    team.append(character)
                 case "4":
                     print("Good choice, he has the power of the earth, give him a name :")
                     let name = Character.addName()
                     let character = Ditcher(name: name)
-                    Player.team.append(character)
+                    team.append(character)
                 default:
                     print("This choice is not possible, please try again !")
                 }
             }
-        } while(Player.team.count < 3)
+        } while(team.count < 3)
         
     }
 }

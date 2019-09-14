@@ -1,10 +1,12 @@
 import Foundation
 
 class Weapon {
-    var damage: Int
-    var repair: Int
+    let name: String
+    let damage: Int
+    let repair: Int
     
-    init(damage: Int, repair: Int) {
+    init(name: String, damage: Int, repair: Int) {
+        self.name = name
         self.damage = damage
         self.repair = repair
     }

@@ -4,6 +4,6 @@ import Foundation
 
 class Druid: Character {
     init(name: String) {
-        super.init(name: name, life: 120, weapon: Potion(), gender: .male, power: .water)
+        super.init(name: name, life: 110, weapon: Weapon(name: "Potion", damage: 30, repair: 20), gender: .male, power: .water)
     }
 }

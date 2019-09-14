@@ -53,4 +53,8 @@ Are you ready to start the game ? (yes or no)
         } while confirm
         exit(0)
     }
+    
+    func fight() {
+        
+    }
 }
