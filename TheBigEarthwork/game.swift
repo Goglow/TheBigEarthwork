@@ -5,6 +5,12 @@ import Foundation
 class Game {
     var player1: Player
     var player2: Player
+    var chest = [Weapon(name: "Boomerang", damage: 25, repair: 25),
+                 Weapon(name: "Mace", damage: 50, repair: 0),
+                 Weapon(name: "Soap", damage: 0, repair: 50),
+                 Weapon(name: "Bow", damage: 5, repair: 5),
+                 Weapon(name: "Slingshot", damage: 10, repair: 0),
+                 Weapon(name: "Moonstone", damage: 0, repair: 10)]
     
     init(player1: Player, player2: Player) {
         self.player1 = player1
@@ -54,7 +60,59 @@ Are you ready to start the game ? (yes or no)
         exit(0)
     }
     
-    func fight() {
-        
-    }
+/* func fight() {
+        let attackingCharacter = player1.selectCharacter()
+        let defendingCharacter = player2.selectCharacter()
+     
+        let attackingCharacter = player1.team[0]
+        let defendingCharacter = player2.team[2]
+     
+        attackingCharacter.giveDamage(target : defendingCharacter)
+     
+     Si les personnages ne peuvent que soigner :
+     son équipe
+     
+     Si les personnages ne peuvent qu'attaquer
+     l'équipe adverse
+     
+     Joueur 1 Choisissez votre personnage
+     // Afficher la liste des personnages
+     1. Toto - Warrior - 100HP - Sword - 20dmg
+     2. Pierre - Druid - 100HP - Potion - 5 dmg - 10 care
+
+     // Vérifier le type de personnage pour voir les actions disponibles
+     Vous avez sélectionner Pierre. Voulez-VOUS
+     1 - Attaquer
+     2 - Soigner
+     
+     // Afficher les cibles
+     Quel personnage voulez-vous attaquer
+     
+     1. Jean - Warrior
+     2. Jacques - Nageur
+     3. Goldman - Chanteur
+     
+     
+     Veuillez choisir le personnage que vous voulez soigner / attaquer (si la seule possibilité est de : soigner, attaquer)
+     
+     
+     
+     // Demander au joueur 1 de choisir un personnage
+     
+     
+     // Vérifier le type de personnage. Combien d'actions peut-il faire?
+            // Si plusieurs actions possibles, demander de choisir l'action
+     
+     // Demander de choisir la cible (dans son équipe pour soin, dans l'équipe adverse pour attaquer)
+     
+     // Rebelotte mais avec le joueur 2
+     
+     
+     // Rebelotte avec le joeur 1 (je suppose qu'il faudra faire une boucle mais à voir - jusqu'à ce qu'il n'y ait une équipe où il reste 0 joueur)
+     
+     
+    } */
+    
+    
+    
 }
