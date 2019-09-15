@@ -49,6 +49,7 @@ Are you ready to start the game ? (yes or no)
                 case "yes":
                     print("Let's go !")
                     self.start()
+                    self.fight()
                 case "no":
                     print("See you next time !")
                     confirm = false
@@ -60,6 +61,14 @@ Are you ready to start the game ? (yes or no)
         exit(0)
     }
     
+    func fight() {
+        player1.selectCharacter()
+        player1.play()
+        player2.selectCharacter()
+        player2.play()
+    } 
+}
+
 /* func fight() {
         let attackingCharacter = player1.selectCharacter()
         let defendingCharacter = player2.selectCharacter()
@@ -77,6 +86,7 @@ Are you ready to start the game ? (yes or no)
      
      Joueur 1 Choisissez votre personnage
      // Afficher la liste des personnages
+
      1. Toto - Warrior - 100HP - Sword - 20dmg
      2. Pierre - Druid - 100HP - Potion - 5 dmg - 10 care
 
@@ -112,7 +122,3 @@ Are you ready to start the game ? (yes or no)
      
      
     } */
-    
-    
-    
-}

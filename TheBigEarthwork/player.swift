@@ -58,6 +58,28 @@ class Player {
                 }
             }
         } while(team.count < 3)
+    }
+    
+    func selectCharacter() {
         
+    }
+    
+    func play() {
+        let choicePlayer = true
+        repeat {
+            print("Choose an action for your character :"
+                + "\n1. Attack"
+                + "\n2. Treat")
+            if let choicePlayer = readLine() {
+                switch choicePlayer {
+                case "1":
+                    print("Your character attacks")
+                case "2":
+                    print("Your character treats")
+                default:
+                    print("I don't understand your choice. Please try again.")
+                }
+            }
+        } while choicePlayer
     }
 }
