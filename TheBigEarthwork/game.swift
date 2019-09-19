@@ -22,7 +22,7 @@ class Game {
         confirmation()
     }
     
-    func start() {
+    func startGame() {
 // The players introduce themselves in turn.
         player1.introduceYourSelf()
         player2.introduceYourSelf()
@@ -48,7 +48,7 @@ Are you ready to start the game ? (yes or no)
                 switch choiceAnswer {
                 case "yes":
                     print("Let's go !")
-                    self.start()
+                    self.startGame()
                     self.fight()
                 case "no":
                     print("See you next time !")
@@ -62,63 +62,15 @@ Are you ready to start the game ? (yes or no)
     }
     
     func fight() {
-        player1.selectCharacter()
-        player1.play()
-        player2.selectCharacter()
-        player2.play()
-    } 
+        let attack = player1.selectCharacter()
+        let defense = player2.selectCharacter()
+    }
+    
+    func endGame() {
+        if player1.team.count <= 0 {
+            print("The winner is \(player2.playerName) !")
+        } else if player2.team.count <= 0 {
+            print("The winner is \(player1.playerName) !")
+        }
+    }
 }
-
-/* func fight() {
-        let attackingCharacter = player1.selectCharacter()
-        let defendingCharacter = player2.selectCharacter()
-     
-        let attackingCharacter = player1.team[0]
-        let defendingCharacter = player2.team[2]
-     
-        attackingCharacter.giveDamage(target : defendingCharacter)
-     
-     Si les personnages ne peuvent que soigner :
-     son équipe
-     
-     Si les personnages ne peuvent qu'attaquer
-     l'équipe adverse
-     
-     Joueur 1 Choisissez votre personnage
-     // Afficher la liste des personnages
-
-     1. Toto - Warrior - 100HP - Sword - 20dmg
-     2. Pierre - Druid - 100HP - Potion - 5 dmg - 10 care
-
-     // Vérifier le type de personnage pour voir les actions disponibles
-     Vous avez sélectionner Pierre. Voulez-VOUS
-     1 - Attaquer
-     2 - Soigner
-     
-     // Afficher les cibles
-     Quel personnage voulez-vous attaquer
-     
-     1. Jean - Warrior
-     2. Jacques - Nageur
-     3. Goldman - Chanteur
-     
-     
-     Veuillez choisir le personnage que vous voulez soigner / attaquer (si la seule possibilité est de : soigner, attaquer)
-     
-     
-     
-     // Demander au joueur 1 de choisir un personnage
-     
-     
-     // Vérifier le type de personnage. Combien d'actions peut-il faire?
-            // Si plusieurs actions possibles, demander de choisir l'action
-     
-     // Demander de choisir la cible (dans son équipe pour soin, dans l'équipe adverse pour attaquer)
-     
-     // Rebelotte mais avec le joueur 2
-     
-     
-     // Rebelotte avec le joeur 1 (je suppose qu'il faudra faire une boucle mais à voir - jusqu'à ce qu'il n'y ait une équipe où il reste 0 joueur)
-     
-     
-    } */

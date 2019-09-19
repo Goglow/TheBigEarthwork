@@ -4,6 +4,7 @@ import Foundation
 
 class Character {
     var name: String
+    var type: Type
     var life: Int
     var weapon: Weapon
     var gender: Gender
@@ -11,8 +12,9 @@ class Character {
     
     static var names = [String]()
     
-    init(name: String, life: Int, weapon: Weapon, gender: Gender, power: Power) {
+    init(name: String, type: Type, life: Int, weapon: Weapon, gender: Gender, power: Power) {
         self.name = name
+        self.type = type
         self.life = life
         self.weapon = weapon
         self.gender = gender
@@ -29,5 +31,25 @@ class Character {
             }
         }
         return addName()
+    }
+    
+    func giveDamage(target: Character) {
+        target.life -= self.weapon.damage
+        
+        if life <= 0 {
+            print("Now, your character is dead, you can't use it anymore !")
+        } else {
+            print("Now, the life of your character is : \(life) points of life.")
+        }
+    }
+        
+    func giveRepair(target: Character) {
+        target.life += self.weapon.repair
+            
+        if life <= 0 {
+            print("Now, your character is dead, you can't use it anymore !")
+        } else {
+            print("Now, the life of your character is : \(life) points of life.")
+        }
     }
 }

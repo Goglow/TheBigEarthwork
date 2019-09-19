@@ -19,6 +19,8 @@
 		83F8A871230C2B4E00905D09 /* gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8A870230C2B4E00905D09 /* gender.swift */; };
 		83F8A873230C45C000905D09 /* game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8A872230C45C000905D09 /* game.swift */; };
 		96CC6BB923282C69000E10CE /* power.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CC6BB823282C69000E10CE /* power.swift */; };
+		96E82D8623311B38001BEADD /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E82D8523311B38001BEADD /* test.swift */; };
+		96F7608623326CAC00AA32A1 /* type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7608523326CAC00AA32A1 /* type.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +49,8 @@
 		83F8A870230C2B4E00905D09 /* gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gender.swift; sourceTree = "<group>"; };
 		83F8A872230C45C000905D09 /* game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = game.swift; sourceTree = "<group>"; };
 		96CC6BB823282C69000E10CE /* power.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = power.swift; sourceTree = "<group>"; };
+		96E82D8523311B38001BEADD /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		96F7608523326CAC00AA32A1 /* type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = type.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 				83BF6575230F3E2900B859AA /* Character */,
 				8389A4C1230B9DB7005CA4FB /* weapon.swift */,
 				83F8A86E230C252300905D09 /* chest.swift */,
+				96E82D8523311B38001BEADD /* test.swift */,
 			);
 			path = TheBigEarthwork;
 			sourceTree = "<group>";
@@ -93,6 +98,7 @@
 		83BF6575230F3E2900B859AA /* Character */ = {
 			isa = PBXGroup;
 			children = (
+				96F7608523326CAC00AA32A1 /* type.swift */,
 				83F8A870230C2B4E00905D09 /* gender.swift */,
 				96CC6BB823282C69000E10CE /* power.swift */,
 				8389A4C3230B9DB7005CA4FB /* enchantress.swift */,
@@ -166,9 +172,11 @@
 				8389A4D0230B9DB9005CA4FB /* weapon.swift in Sources */,
 				83F8A86F230C252300905D09 /* chest.swift in Sources */,
 				8389A4D5230B9DB9005CA4FB /* character.swift in Sources */,
+				96E82D8623311B38001BEADD /* test.swift in Sources */,
 				8389A4D4230B9DB9005CA4FB /* ditcher.swift in Sources */,
 				8389A49B230B953A005CA4FB /* main.swift in Sources */,
 				8389A4D7230B9DB9005CA4FB /* player.swift in Sources */,
+				96F7608623326CAC00AA32A1 /* type.swift in Sources */,
 				83F8A871230C2B4E00905D09 /* gender.swift in Sources */,
 				96CC6BB923282C69000E10CE /* power.swift in Sources */,
 				8389A4DB230B9DB9005CA4FB /* druid.swift in Sources */,
