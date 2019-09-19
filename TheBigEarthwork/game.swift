@@ -64,7 +64,7 @@ Are you ready to start the game ? (yes or no)
     func fight() {
         let attack = player1.selectCharacter()
         let defense = player2.selectCharacter()
-    }
+    } // while endGame
     
     func endGame() {
         if player1.team.count <= 0 {
