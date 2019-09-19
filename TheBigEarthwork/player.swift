@@ -60,13 +60,11 @@ class Player {
         } while(team.count < 3)
     }
     
-    func selectCharacter() {
+    func selectCharacter() -> Character {
         /* Joueur 1 Choisissez votre personnage
          // Afficher la liste des personnages
          1. Toto - Warrior - 100HP - Sword - 20dmg
          2. Pierre - Druid - 100HP - Potion - 5 dmg - 10 care */
-        let choiceSelect = true
-        repeat {
             print("\(playerName), choose a character for play :"
                 + "\n1. Character n°1 : \(team[0].name) - \(team[0].type) - \(team[0].life) points of life - \(team[0].weapon.name) - \(team[0].weapon.damage) points of damage - \(team[0].weapon.repair) points of repair."
                 + "\n2. Character n°2 : \(team[1].name) -  \(team[1].type) - \(team[1].life) points of life - \(team[1].weapon.name) - \(team[1].weapon.damage) points of damage - \(team[1].weapon.repair) points of repair."
@@ -75,27 +73,25 @@ class Player {
                 switch choiceSelect {
                 case "1":
                     print("You choose : \(team[0].name).")
-                    self.play()
+                    return team[0]
                 case "2":
                     print("You choose : \(team[1].name).")
-                    self.play()
+                    return team[1]
                 case "3":
                     print("You choose : \(team[2].name).")
-                    self.play()
+                    return team[2]
                 default:
                     print("I don't understand your choice. Please try again.")
                 }
             }
-        } while choiceSelect
+        return selectCharacter()
     }
 
-    func play() {
+    func wantToAttack() -> Bool {
         /* Vérifier le type de personnage pour voir les actions disponibles
         Vous avez sélectionner Pierre. Voulez-VOUS
         1 - Attaquer
         2 - Soigner */
-        let choiceAction = true
-        repeat {
             print("\(playerName), choose an action for your character :"
                 + "\n1. Attack someone from the opposing team !"
                 + "\n2. Treat someone from his team or himself !")
@@ -103,61 +99,14 @@ class Player {
                 switch choiceAction {
                 case "1":
                     print("Your character will attack an ennemy character. Choose it, please !")
-                    self.selectTargetEnnemy()
+                    return true
                 case "2":
                     print("Your character will treat a member of his team or himself. Choose it, please !")
-                    self.selectTargetFriendOrHimself()
+                    return false
                 default:
                     print("I don't understand your choice. Please try again.")
                 }
             }
-        } while choiceAction
-    }
-    
-    func selectTargetEnnemy() {
-        let choiceTargetEnnemy = true
-        repeat {
-            print("\(playerName), choose a character to attack :"
-                + "\n1. Character n°1, \(team[0].name) -  \(team[0].type)."
-                + "\n2. Character n°2, \(team[1].name) -  \(team[1].type)."
-                + "\n3. Character n°3, \(team[2].name) -  \(team[2].type).")
-            if let choiceTargetEnnemy = readLine() {
-                switch choiceTargetEnnemy {
-                case "1":
-                    print("You choose : \(team[0].name).")
-                case "2":
-                    print("You choose : \(team[1].name).")
-                case "3":
-                    print("You choose : \(team[2].name).")
-                default:
-                    print("I don't understand your choice. Please try again.")
-                }
-            }
-        } while choiceTargetEnnemy
-    }
-    
-    func selectTargetFriendOrHimself() {
-        let choiceTargetFriendOrHimself = true
-        repeat {
-            print("\(playerName), choose a character for treat :"
-                + "\n1. Character n°1 : \(team[0].name) - \(team[0].type) - \(team[0].life) points of life - \(team[0].weapon.name) - \(team[0].weapon.damage) points of damage - \(team[0].weapon.repair) points of repair."
-                + "\n2. Character n°2 : \(team[1].name) -  \(team[1].type) - \(team[1].life) points of life - \(team[1].weapon.name) - \(team[1].weapon.damage) points of damage - \(team[1].weapon.repair) points of repair."
-                + "\n3. Character n°3 : \(team[2].name) -  \(team[2].type) - \(team[2].life) points of life - \(team[2].weapon.name) - \(team[2].weapon.damage) points of damage - \(team[2].weapon.repair) points of repair.")
-            if let choiceTargetFriendOrHimself = readLine() {
-                switch choiceTargetFriendOrHimself {
-                case "1":
-                    print("You choose : \(team[0].name).")
-                    team[0].giveRepair(target: team[0])
-                case "2":
-                    print("You choose : \(team[1].name).")
-                    team[0].giveRepair(target: team[0])
-                case "3":
-                    print("You choose : \(team[2].name).")
-                    team[0].giveRepair(target: team[0])
-                default:
-                    print("I don't understand your choice. Please try again.")
-                }
-            }
-        } while choiceTargetFriendOrHimself
+        return wantToAttack()
     }
 }

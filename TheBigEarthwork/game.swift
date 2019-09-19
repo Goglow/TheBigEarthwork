@@ -62,9 +62,30 @@ Are you ready to start the game ? (yes or no)
     }
     
     func fight() {
-        let attack = player1.selectCharacter()
-        let defense = player2.selectCharacter()
+        let attacker = player1.selectCharacter()
+        // Vérifier si le personnage est un ditcher ou pas
+        
+        if let ditcher = attacker as? Ditcher {
+            // Si l'attaqueur est un ditcher faire quelque chose
+                let defenser = player2.selectCharacter()
+                ditcher.giveDamage(target: defenser)
+        }
+        else {
+            // D'abord demander au joueur s'il veut attaquer ou défendre
+            let attack = player1.wantToAttack()
+            if attack {
+                let defenser = player2.selectCharacter()
+                attacker.giveDamage(target: defenser)
+            } else {
+                let defenser = player1.selectCharacter()
+                attacker.giveDamage(target: defenser)
+            }
+        }
     } // while endGame
+    
+    // Penser à retirer un personnage à chaque mort
+    // Alterner le player1 et le player2
+    // Mettre dans la fonction fight (appeler les player en faisant une boucle)
     
     func endGame() {
         if player1.team.count <= 0 {
