@@ -39,7 +39,7 @@ class Character {
         if life <= 0 {
             print("Now, your character is dead, you can't use it anymore !")
         } else {
-            print("Now, the life of your character is : \(life) points of life.")
+            print("Now, the life of this character is : \(target.life) points of life.")
         }
     }
         
@@ -49,7 +49,7 @@ class Character {
         if life <= 0 {
             print("Now, your character is dead, you can't use it anymore !")
         } else {
-            print("Now, the life of your character is : \(life) points of life.")
+            print("Now, the life of this character is : \(target.life) points of life.")
         }
     }
 }

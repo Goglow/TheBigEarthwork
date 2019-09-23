@@ -76,5 +76,66 @@ import Foundation
  
  // Rebelotte avec le joeur 1 (je suppose qu'il faudra faire une boucle mais à voir - jusqu'à ce qu'il n'y ait une équipe où il reste 0 joueur)
  
+ func fight() {
+ let attacker = player1.selectCharacter()
+ if let ditcher = attacker as? Ditcher {
+ ditcher.giveDamage(target: defenser)
+ }
+ else {
+ let attacker = player1.wantToAttack()
+ if attack {
+ let attacker = player1.whoAttack()
+ attacker.giveDamage(target: defenser)
+ } else {
+ let repair = player1.whoAttack()
+ attacker.giveRepair(target: attacker)
+ }
+ }
+ } // while endGame
  
+ 
+ Avant
+ func fight() {
+ let attacker = player1.selectCharacter()
+ // Vérifier si le personnage est un ditcher ou pas
+ 
+ if let ditcher = attacker as? Ditcher {
+ // Si l'attaqueur est un ditcher faire quelque chose
+ let defenser = player2.selectCharacter()
+ ditcher.giveDamage(target: defenser)
+ }
+ else {
+ // D'abord demander au joueur s'il veut attaquer ou défendre
+ let attack = player1.wantToAttack()
+ if attack {
+ let defenser = player2.selectCharacter()
+ attacker.giveDamage(target: defenser)
+ } else {
+ let defenser = player1.selectCharacter()
+ attacker.giveDamage(target: defenser)
+ }
+ }
+ } // while endGame
+ 
+ 
+ func fight() {
+ let attacker = player1.selectCharacter()
+ // Vérifier si le personnage est un ditcher ou pas
+ if let ditcher = attacker as? Ditcher {
+ // Si l'attaqueur est un ditcher faire quelque chose
+ let defenser = player2.selectCharacter()
+ ditcher.giveDamage(target: defenser)
+ }
+ else {
+ // D'abord demander au joueur s'il veut attaquer ou défendre
+ let attack = player1.wantToAttack()
+ if attack {
+ let defenser = player1.whoAttack()
+ attacker.giveDamage(target: defenser)
+ } else {
+ let defenser = player1.whoAttack()
+ attacker.giveRepair(target: attacker)
+ }
+ }
+ } // while endGame
  } */
