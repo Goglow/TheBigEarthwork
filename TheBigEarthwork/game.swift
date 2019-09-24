@@ -3,6 +3,7 @@ import Foundation
 // Create a class "Game"
 
 class Game {
+    var numberOfRounds = 0
     var player1: Player
     var player2: Player
     var chest = [Weapon(name: "Boomerang", damage: 25, repair: 25),
@@ -29,6 +30,20 @@ class Game {
 // They each create their team and name their characters.
         player1.createYourTeam()
         player2.createYourTeam()
+// The fight starts
+        repeat {
+        fight()
+        defense()
+            numberOfRounds += 1
+        } while numberOfRounds == 10
+    }
+    
+    func endGame() {
+        if player1.team.count <= 0 {
+            print("The winner is \(player2.playerName) in \(numberOfRounds) rounds !")
+        } else if player2.team.count <= 0 {
+            print("The winner is \(player1.playerName) in \(numberOfRounds) rounds !")
+        }
     }
     
     func introduction() {
@@ -49,9 +64,6 @@ Are you ready to start the game ? (yes or no)
                 case "yes":
                     print("Let's go !")
                     self.startGame()
-                    self.fight()
-                    self.revange()
-                    self.endGame()
                 case "no":
                     print("See you next time !")
                     confirm = false
@@ -71,6 +83,9 @@ Are you ready to start the game ? (yes or no)
             print("Please, choose a target : ")
                 let defenser = player2.whoAttack()
                 ditcher.giveDamage(target: defenser)
+                if defenser.life <= 0 {
+                    //     player2.team.remove(at: Int)
+                }
         }
         else {
             // D'abord demander au joueur s'il veut attaquer ou défendre
@@ -81,11 +96,14 @@ Are you ready to start the game ? (yes or no)
             } else {
                 let attacker = player1.whoAttack()
                 attacker.giveRepair(target: attacker)
+                if attacker.life <= 0 {
+               //     player1.team.remove(at: Int)
+                }
             }
         }
     }
     
-    func revange() {
+    func defense() {
         let attacker = player2.selectCharacter()
         // Vérifier si le personnage est un ditcher ou pas
         if let ditcher = attacker as? Ditcher {
@@ -93,6 +111,9 @@ Are you ready to start the game ? (yes or no)
             print("Please, choose a target : ")
             let defenser = player1.whoAttack()
             ditcher.giveDamage(target: defenser)
+            if defenser.life <= 0 {
+                //     player1.team.remove(at: Int)
+            }
         }
         else {
             // D'abord demander au joueur s'il veut attaquer ou défendre
@@ -103,18 +124,12 @@ Are you ready to start the game ? (yes or no)
             } else {
                 let attacker = player2.whoAttack()
                 attacker.giveRepair(target: attacker)
+                if attacker.life <= 0 {
+                    //     player2.team.remove(at: Int)
+                }
             }
         }
     }
     // Penser à retirer un personnage à chaque mort
-    // Alterner le player1 et le player2
-    // Mettre dans la fonction fight (appeler les player en faisant une boucle)
-    
-    func endGame() {
-        if player1.team.count <= 0 {
-            print("The winner is \(player2.playerName) !")
-        } else if player2.team.count <= 0 {
-            print("The winner is \(player1.playerName) !")
-        }
-    }
+    // Alterner le player1 et le player2 dans la fonction fight (appeler les player en faisant une boucle)
 }

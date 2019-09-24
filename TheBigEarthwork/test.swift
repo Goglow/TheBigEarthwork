@@ -144,4 +144,10 @@ import Foundation
  if target.life <= 0 {
  team.remove(at: target)
  }
- } */
+ 
+ if defenser.life <= 0 {
+ if let index = index(defenser) {
+ player1.team.remove(at: index)
+ }
+ 
+ */
