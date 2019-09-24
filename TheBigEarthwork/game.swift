@@ -50,6 +50,8 @@ Are you ready to start the game ? (yes or no)
                     print("Let's go !")
                     self.startGame()
                     self.fight()
+                    self.revange()
+                    self.endGame()
                 case "no":
                     print("See you next time !")
                     confirm = false
@@ -66,7 +68,8 @@ Are you ready to start the game ? (yes or no)
         // Vérifier si le personnage est un ditcher ou pas
         if let ditcher = attacker as? Ditcher {
             // Si l'attaqueur est un ditcher faire quelque chose
-                let defenser = player2.selectCharacter()
+            print("Please, choose a target : ")
+                let defenser = player2.whoAttack()
                 ditcher.giveDamage(target: defenser)
         }
         else {
@@ -80,8 +83,29 @@ Are you ready to start the game ? (yes or no)
                 attacker.giveRepair(target: attacker)
             }
         }
-    } // while endGame
+    }
     
+    func revange() {
+        let attacker = player2.selectCharacter()
+        // Vérifier si le personnage est un ditcher ou pas
+        if let ditcher = attacker as? Ditcher {
+            // Si l'attaqueur est un ditcher faire quelque chose
+            print("Please, choose a target : ")
+            let defenser = player1.whoAttack()
+            ditcher.giveDamage(target: defenser)
+        }
+        else {
+            // D'abord demander au joueur s'il veut attaquer ou défendre
+            let attack = player2.wantToAttack()
+            if attack {
+                let defenser = player1.whoAttack()
+                attacker.giveDamage(target: defenser)
+            } else {
+                let attacker = player2.whoAttack()
+                attacker.giveRepair(target: attacker)
+            }
+        }
+    }
     // Penser à retirer un personnage à chaque mort
     // Alterner le player1 et le player2
     // Mettre dans la fonction fight (appeler les player en faisant une boucle)

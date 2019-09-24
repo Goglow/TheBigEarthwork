@@ -138,4 +138,10 @@ import Foundation
  }
  }
  } // while endGame
+ 
+ 
+ func characterIsDead() -> Character {
+ if target.life <= 0 {
+ team.remove(at: target)
+ }
  } */
