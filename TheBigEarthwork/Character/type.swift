@@ -1,8 +1,8 @@
 import Foundation
 
 enum Type {
-    case enchantress
-    case druid
-    case warrior
-    case ditcher
+    case Enchantress
+    case Druid
+    case Warrior
+    case Ditcher
 }

@@ -4,7 +4,7 @@ import Foundation
 
 class Enchantress: Character {
     init(name: String) {
-        super.init(name: name, type: .enchantress ,life: 120, weapon: Weapon(name: "Philter", damage: 20, repair: 20), gender: .female, power: .fire)
+        super.init(name: name, type: .Enchantress ,life: 120, weapon: Weapon(name: "Philter", damage: 20, repair: 20), gender: .female, power: .fire)
     }
 }
 
