@@ -81,34 +81,32 @@ Are you ready to start the game ? (yes or no)
     func fight(attackingPlayer: Player, defendingPlayer: Player) {
         print("\(attackingPlayer.playerName), choose a character for play :")
         let attacker = attackingPlayer.selectCharacter(in: attackingPlayer.team)
-        // Vérifier si le personnage est un ditcher ou pas
+            // Vérifier si le personnage est un ditcher ou pas
         if let ditcher = attacker as? Ditcher {
             // Si l'attaqueur est un ditcher faire quelque chose
             print("Please, choose a target : ")
             let defenser = attackingPlayer.selectCharacter(in: defendingPlayer.team)
-                ditcher.giveDamage(target: defenser)
-                if defenser.life <= 0 {
-                let index = defendingPlayer.team.index(where: {$0 === defenser})
-                defendingPlayer.team.remove(at: index!)
-                }
-        else {
-                
-            // D'abord demander au joueur s'il veut attaquer ou défendre
-            let attack = attackingPlayer.wantToAttack()
-            if attack {
-                let defenser = attackingPlayer.selectCharacter(in: defendingPlayer.team)
-                attacker.giveDamage(target: defenser)
+            ditcher.giveDamage(target: defenser)
                 if defenser.life <= 0 {
                     let index = defendingPlayer.team.index(where: {$0 === defenser})
                     defendingPlayer.team.remove(at: index!)
-            } else {
-                let attacker = attackingPlayer.selectCharacter(in: attackingPlayer.team)
-                attacker.giveRepair(target: attacker)
                 }
-            }
+        }
+        else {
+            // D'abord demander au joueur s'il veut attaquer ou défendre
+            let attack = attackingPlayer.wantToAttack()
+                if attack {
+                    let defenser = attackingPlayer.selectCharacter(in: defendingPlayer.team)
+                    attacker.giveDamage(target: defenser)
+                        if defenser.life <= 0 {
+                            let index = defendingPlayer.team.index(where: {$0 === defenser})
+                            defendingPlayer.team.remove(at: index!)
+                        }
+                }
+                else {
+                    let attacker = attackingPlayer.selectCharacter(in: attackingPlayer.team)
+                    attacker.giveRepair(target: attacker)
+                }
         }
     }
-    }
-    // Penser à retirer un personnage à chaque mort
-    // Alterner le player1 et le player2 dans la fonction fight (appeler les player en faisant une boucle)
 }
