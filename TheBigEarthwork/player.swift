@@ -16,10 +16,10 @@ class Player {
     }
 // The players introduce themselves in turn.
     func introduceYourSelf() {
-        print("Hello player n°\(playerNumber)! What is your name?")
+        print("Hello player n°\(playerNumber) ! What is your name ?")
         if let playerName = readLine() {
             self.playerName = playerName
-            print("It's ok!")
+            print("It's ok !")
         }
     }
 // They each create their team and name their characters.
@@ -60,33 +60,37 @@ class Player {
         } while(team.count < 3)
     }
     
-    func selectCharacter() -> Character {
-        /* Joueur 1 Choisissez votre personnage
+    func selectCharacter(in team: [Character]) -> Character {
+        /*Joueur 1 Choisissez votre personnage
         // Afficher la liste des personnages
         1. Toto - Warrior - 100HP - Sword - 20dmg
         2. Pierre - Druid - 100HP - Potion - 5 dmg - 10 care */
-        print("\(playerName), choose a character for play :"
-            + "\n1. \(team[0].name) - \(team[0].type) - \(team[0].life) points of life - \(team[0].weapon.name) - \(team[0].weapon.damage) points of damage - \(team[0].weapon.repair) points of repair."
-            + "\n2. \(team[1].name) - \(team[1].type) - \(team[1].life) points of life - \(team[1].weapon.name) - \(team[1].weapon.damage) points of damage - \(team[1].weapon.repair) points of repair."
-            + "\n3. \(team[2].name) - \(team[2].type) - \(team[2].life) points of life - \(team[2].weapon.name) - \(team[2].weapon.damage) points of damage - \(team[2].weapon.repair) points of repair.")
+        for i in 0..<3 {
+            print("\(i). " + team[i].name /*+ " - " + team[i].type + " - " + team[i].life + " points of life" + " - " + team[i].weapon.name + " - " + team[i].weapon.damage + " points of damage" + " - " + team[i].weapon.repair + " points of repair"*/)
+        }
         if let choiceSelect = readLine() {
             switch choiceSelect {
-            case "1":
+            case "0":
                 print("You choose \(team[0].name).")
                 return team[0]
-            case "2":
+            case "1":
                 print("You choose \(team[1].name).")
                 return team[1]
-            case "3":
+            case "2":
                 print("You choose \(team[2].name).")
                 return team[2]
             default:
                 print("I don't understand your choice. Please try again.")
             }
         }
-        return selectCharacter()
+        return selectCharacter(in: team)
     }
-
+    
+            // faire for in pour select character !!!!
+            // Regarder pour le coffre - l'ajouter
+            // Que faire avec les pouvoirs
+            // Endgame = voir les statistiques 
+    
     func wantToAttack() -> Bool {
         /* Vérifier le type de personnage pour voir les actions disponibles
         Vous avez sélectionner Pierre. Voulez-VOUS
@@ -108,32 +112,5 @@ class Player {
             }
         }
         return wantToAttack()
-    }
-    
-    func whoAttack() -> Character {
-        /* Afficher les cibles
-        Quel personnage voulez-vous attaquer
-        1. Jean - Warrior
-        2. Jacques - Nageur
-        3. Goldman - Chanteur */
-        print("1. \(team[0].name) - \(team[0].type)."
-            + "\n2. \(team[1].name) - \(team[1].type)."
-            + "\n3. \(team[2].name) - \(team[2].type).")
-        if let choiceWhoAttack = readLine() {
-            switch choiceWhoAttack {
-            case "1":
-                print("You choose \(team[0].name).")
-                return team[0]
-            case "2":
-                print("You choose \(team[1].name).")
-                return team[1]
-            case "3":
-                print("You choose \(team[2].name).")
-                return team[2]
-            default:
-                print("I don't understand your choice. Please try again.")
-            }
-        }
-        return whoAttack()
     }
 }

@@ -32,10 +32,13 @@ class Game {
         player2.createYourTeam()
 // The fight starts
         repeat {
-        fight()
-        defense()
+        fight(attackingPlayer: player1, defendingPlayer: player2)
+            if player2.team.count > 0 {
+        fight(attackingPlayer: player2, defendingPlayer: player1)
+            }
             numberOfRounds += 1
-        } while numberOfRounds == 10
+        } while player1.team.count > 0 && player2.team.count > 0
+        endGame()
     }
     
     func endGame() {
@@ -75,60 +78,36 @@ Are you ready to start the game ? (yes or no)
         exit(0)
     }
     
-    func fight() {
-        let attacker = player1.selectCharacter()
+    func fight(attackingPlayer: Player, defendingPlayer: Player) {
+        print("\(attackingPlayer.playerName), choose a character for play :")
+        let attacker = attackingPlayer.selectCharacter(in: attackingPlayer.team)
         // Vérifier si le personnage est un ditcher ou pas
         if let ditcher = attacker as? Ditcher {
             // Si l'attaqueur est un ditcher faire quelque chose
             print("Please, choose a target : ")
-                let defenser = player2.whoAttack()
+            let defenser = attackingPlayer.selectCharacter(in: defendingPlayer.team)
                 ditcher.giveDamage(target: defenser)
                 if defenser.life <= 0 {
-                    //     player2.team.remove(at: Int)
+                let index = defendingPlayer.team.index(where: {$0 === defenser})
+                defendingPlayer.team.remove(at: index!)
                 }
-        }
         else {
+                
             // D'abord demander au joueur s'il veut attaquer ou défendre
-            let attack = player1.wantToAttack()
+            let attack = attackingPlayer.wantToAttack()
             if attack {
-                let defenser = player2.whoAttack()
+                let defenser = attackingPlayer.selectCharacter(in: defendingPlayer.team)
                 attacker.giveDamage(target: defenser)
+                if defenser.life <= 0 {
+                    let index = defendingPlayer.team.index(where: {$0 === defenser})
+                    defendingPlayer.team.remove(at: index!)
             } else {
-                let attacker = player1.whoAttack()
+                let attacker = attackingPlayer.selectCharacter(in: attackingPlayer.team)
                 attacker.giveRepair(target: attacker)
-                if attacker.life <= 0 {
-               //     player1.team.remove(at: Int)
                 }
             }
         }
     }
-    
-    func defense() {
-        let attacker = player2.selectCharacter()
-        // Vérifier si le personnage est un ditcher ou pas
-        if let ditcher = attacker as? Ditcher {
-            // Si l'attaqueur est un ditcher faire quelque chose
-            print("Please, choose a target : ")
-            let defenser = player1.whoAttack()
-            ditcher.giveDamage(target: defenser)
-            if defenser.life <= 0 {
-                //     player1.team.remove(at: Int)
-            }
-        }
-        else {
-            // D'abord demander au joueur s'il veut attaquer ou défendre
-            let attack = player2.wantToAttack()
-            if attack {
-                let defenser = player1.whoAttack()
-                attacker.giveDamage(target: defenser)
-            } else {
-                let attacker = player2.whoAttack()
-                attacker.giveRepair(target: attacker)
-                if attacker.life <= 0 {
-                    //     player2.team.remove(at: Int)
-                }
-            }
-        }
     }
     // Penser à retirer un personnage à chaque mort
     // Alterner le player1 et le player2 dans la fonction fight (appeler les player en faisant une boucle)

@@ -36,7 +36,7 @@ class Character {
     func giveDamage(target: Character) {
         target.life -= self.weapon.damage
         
-        if life <= 0 {
+        if target.life <= 0 {
             print("Now, your character is dead, you can't use it anymore !")
         } else {
             print("Now, the life of this character is : \(target.life) points of life.")
@@ -46,7 +46,7 @@ class Character {
     func giveRepair(target: Character) {
         target.life += self.weapon.repair
             
-        if life <= 0 {
+        if target.life <= 0 {
             print("Now, your character is dead, you can't use it anymore !")
         } else {
             print("Now, the life of this character is : \(target.life) points of life.")
