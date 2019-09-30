@@ -1,6 +1,6 @@
 import Foundation
 
-// The enchantress is a woman whose power is seduction.
+// The enchantress is a woman whose power is seduction. She is on fire !
 
 class Enchantress: Character {
     init(name: String) {

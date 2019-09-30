@@ -1,6 +1,6 @@
 import Foundation
 
-// The warrior is a strong woman who handles weapons well.
+// The warrior is a strong woman who handles weapons well. Her sword splits the air !
 
 class Warrior: Character {
     init(name: String) {

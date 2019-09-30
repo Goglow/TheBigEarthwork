@@ -1,6 +1,6 @@
 import Foundation
 
-// The druid is a wise man, the plants have no secrets for him.
+// The druid is a wise man, the plants have no secrets for him. His potions, mixture of plants and water, are powerful care !
 
 class Druid: Character {
     init(name: String) {

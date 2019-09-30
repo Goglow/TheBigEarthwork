@@ -1,6 +1,6 @@
 import Foundation
 
-// The ditcher is a man who, as his name indicates, is ruthless.
+// The ditcher is a man who, as his name indicates, is ruthless. The earth, he crushes it with one hand !
 
 class Ditcher: Character {
     init(name: String) {
