@@ -115,12 +115,44 @@ Are you ready to start the game ? (yes or no)
                 }
         }
     }
-    // A chest appear random with an weapon (bonus or malus)
-    func chestRandom() {
-        
+    // A chest appear random with an weapon (bonus or malus) to replace the character's current weapon
+    // A chest appear random
+    func chestRandom(numberOfRounds: Int) {
+        for _ in 1...numberOfRounds {
+            _ = arc4random_uniform(20)
+        }
     }
-    
-    func chestWeapon() {
+    // A weapon is taken at random in the chest
+    func chestWeapon() -> Weapon {
+        let randomIndex = Int(arc4random_uniform(UInt32(chest.count)))
         
+        return chest[randomIndex]
+    }
+    // The current weapon of the character is replaced by the one taken in the chest
+    func replaceWeapon() {
+ 
     }
 }
+    /*
+    func chestRandom(numberOfRounds: Int) {
+        for i in 1...numberOfRounds {
+               let number = Int.random(in: 0 ..< 10)
+        }
+    }
+     Exercice du Robot
+     func seDeplacerAleatoirement(coups: Int) {
+     for _ in 1...coups {
+     let speed = Int.random(in: 0...maximumSpeedOfMovement)
+     let direction = Direction.allCases.randomElement()!
+     move(direction: direction, choiceSpeed: speed)
+     }
+ 
+     What about picking a random element from an array? You can do that like this:
+     let names = ["Ford", "Zaphod", "Trillian", "Arthur", "Marvin"]
+     let randomName = names.randomElement()
+ 
+    let barray = ["Frodo", "sam", "wise", "gamgee"]
+    let randomIndex = Int(arc4random_uniform(UInt32(array.count)))
+    print(array[randomIndex])
+}
+*/
