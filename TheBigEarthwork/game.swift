@@ -109,4 +109,12 @@ Are you ready to start the game ? (yes or no)
                 }
         }
     }
+    // A chest appear random with an weapon (bonus or malus)
+    func chestRandom() {
+        
+    }
+    
+    func chestWeapon() {
+        
+    }
 }
