@@ -66,7 +66,7 @@ class Player {
         1. Toto - Warrior - 100HP - Sword - 20dmg
         2. Pierre - Druid - 100HP - Potion - 5 dmg - 10 care */
         for i in 0..<team.count {
-            print("\(i). " + team[i].name, "-", team[i].type, "-", team[i].life, "points of life", "-", team[i].weapon.name, "-", team[i].weapon.damage, "points of damage", "-", team[i].weapon.repair, "points of repair")
+            print("\(i).", team[i].name, "-", team[i].type, "-", team[i].life, "points of life", "-", team[i].weapon.name, "-", team[i].weapon.damage, "points of damage", "-", team[i].weapon.repair, "points of repair")
         }
         if let choiceSelect = readLine() {
             switch choiceSelect {

@@ -40,12 +40,18 @@ class Game {
         } while player1.team.count > 0 && player2.team.count > 0
         endGame()
     }
-    
+    // Le nombre de tours et la liste des personnages des deux équipes avec leurs propriétés (point de vie, etc.).
     func endGame() {
         if player1.team.count <= 0 {
-            print("The winner is \(player2.playerName) in \(numberOfRounds) rounds !")
+            print("The winner is \(player2.playerName) in \(numberOfRounds) rounds ! The remaining players of the team are :")
+                for i in 0..<player2.team.count {
+                    print("\(i).", player2.team[i].name, "-", player2.team[i].type, "-", player2.team[i].life, "points of life", "-", player2.team[i].weapon.name)
+            }
         } else if player2.team.count <= 0 {
-            print("The winner is \(player1.playerName) in \(numberOfRounds) rounds !")
+            print("The winner is \(player1.playerName) in \(numberOfRounds) rounds ! The remaining players of the team are :")
+                for i in 0..<player1.team.count {
+                print("\(i).", player1.team[i].name, "-", player1.team[i].type, "-", player1.team[i].life, "points of life", "-", player1.team[i].weapon.name)
+            }
         }
     }
     
