@@ -69,18 +69,19 @@ class Player {
             print("\(i).", team[i].name, "-", team[i].type, "-", team[i].life, "points of life", "-", team[i].weapon.name, "-", team[i].weapon.damage, "points of damage", "-", team[i].weapon.repair, "points of repair")
         }
         if let choiceSelect = readLine() {
-            switch choiceSelect {
-            case "0":
-                print("You choose \(team[0].name).")
-                return team[0]
-            case "1":
-                print("You choose \(team[1].name).")
-                return team[1]
-            case "2":
-                print("You choose \(team[2].name).")
-                return team[2]
-            default:
-                print("I don't understand your choice. Please try again.")
+           // Vérifier que choiceSelect est bien un Int
+            if let choiceInt = Int(choiceSelect) {
+                // Regarder si ce Int est bien compris entre 0..<team.count
+                if choiceInt >= 0 && choiceInt < team.count {
+                    // => On renvoie le personnage (index)
+                    return team[choiceInt]
+                } else {
+                    // Tromper de numéro
+                    print("Number must be between 0 and \(team.count)")
+                }
+            } else {
+            // Erreur de caractères
+            print("I don't understand your choice ! Please, try again.")
             }
         }
         return selectCharacter(in: team)
