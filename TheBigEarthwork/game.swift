@@ -5,13 +5,6 @@ class Game {
     var numberOfRounds = 0
     var player1: Player
     var player2: Player
-    // Bonus and malus weapons list.
-    var chest = [Weapon(name: "Boomerang", damage: 25, repair: 25),
-                 Weapon(name: "Mace", damage: 45, repair: 5),
-                 Weapon(name: "Soap", damage: 5, repair: 45),
-                 Weapon(name: "Bow", damage: 5, repair: 5),
-                 Weapon(name: "Slingshot", damage: 5, repair: 5),
-                 Weapon(name: "Moonstone", damage: 5, repair: 5)]
     
     init(player1: Player, player2: Player) {
         self.player1 = player1
@@ -79,6 +72,7 @@ Are you ready to start the game ? (yes or no)
                 switch choiceAnswer {
                 case "yes":
                     print("\nLet's go !")
+                    self.reset()
                     self.startGame()
                 case "no":
                     print("\nSee you next time !")
@@ -92,8 +86,13 @@ Are you ready to start the game ? (yes or no)
     }
     
     func fight(attackingPlayer: Player, defendingPlayer: Player) {
+        let chest = Chest()
         print("\n\(attackingPlayer.playerName), choose a character for play :")
         let attacker = attackingPlayer.selectCharacter(in: attackingPlayer.team)
+        if let newWeapon = chest.chestRandom() {
+            attacker.weapon = newWeapon
+            print("\nThe new information about this character is : \(attacker.name) - \(attacker.type) - \(attacker.life) points of life - \(attacker.weapon.name) - \(attacker.weapon.damage) points of damage - \(attacker.weapon.repair) points of repair")
+        }
             // To check is the character is a ditcher or not.
         if let ditcher = attacker as? Ditcher {
             // If the attacker is a ditcher, to attack directly because he can't heal.
@@ -110,7 +109,6 @@ Are you ready to start the game ? (yes or no)
             let attack = attackingPlayer.wantToAttack()
                 if attack {
                     let defenser = attackingPlayer.selectCharacter(in: defendingPlayer.team)
-                        chestRandom(attacker: attacker)
                     attacker.giveDamage(target: defenser)
                         if defenser.life <= 0 {
                             let index = defendingPlayer.team.index(where: {$0 === defenser})
@@ -123,27 +121,10 @@ Are you ready to start the game ? (yes or no)
                 }
         }
     }
-    // A chest appears randomly with an weapon (bonus or malus) to replace the character's current weapon.
-    // A chest appears randomly.
-    func chestRandom(attacker: Character) {
-        let round = Int(arc4random_uniform(100))
-        if round >= 70 {
-            print("\nGood job ! You have found a chest !")
-            _ = chestWeapon(character: attacker)
-            replaceWeapon(character: attacker)
-        }
-    }
-    // A weapon is taken at random in the chest.
-    func chestWeapon(character: Character) -> Weapon {
-        print("In this chest, a weapon appears randomly and it is given to your character !")
-        let randomIndex = Int(arc4random_uniform(UInt32(chest.count)))
-        
-        return chest[randomIndex]
-    }
-    // The current weapon of the character is replaced by the one taken in the chest.
-    func replaceWeapon(character: Character) {
-        let newWeapon = chestWeapon(character: character)
-        character.weapon = newWeapon
-        print("\nThe new information about this character is : \(character.name) - \(character.type) - \(character.life) points of life - \(character.weapon.name) - \(character.weapon.damage) points of damage - \(character.weapon.repair) points of repair")
+    
+    func reset() {
+        numberOfRounds = 0
+        self.player1.team = []
+        self.player2.team = []
     }
 }
