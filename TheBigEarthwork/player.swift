@@ -77,40 +77,34 @@ class Player {
                     return team[choiceInt]
                 } else {
                     // Tromper de numéro
-                    print("Number must be between 0 and \(team.count - 1)")
+                    print("\nNumber must be between 0 and \(team.count - 1)")
                 }
             } else {
             // Erreur de caractères
-            print("I don't understand your choice ! Please, try again.")
+            print("\nI don't understand your choice ! Please, try again.")
             }
         }
         return selectCharacter(in: team)
     }
-    
-            // faire for in pour select character !!!! OK!!
-    // Trop lourd quand je mets ces infos là : /*+ " - " + team[i].type + " - " + team[i].life + " points of life" + " - " + team[i].weapon.name + " - " + team[i].weapon.damage + " points of damage" + " - " + team[i].weapon.repair + " points of repair"*/
-            // Regarder pour le coffre - l'ajouter
-            // Que faire avec les pouvoirs
-            // Endgame = voir les statistiques 
     
     func wantToAttack() -> Bool {
         /* Vérifier le type de personnage pour voir les actions disponibles
         Vous avez sélectionner Pierre. Voulez-VOUS
         1 - Attaquer
         2 - Soigner */
-        print("\(playerName), choose an action for your character :"
+        print("\n\(playerName), choose an action for your character :"
             + "\n0. Attack someone from the opposing team !"
             + "\n1. Treat someone from his team or himself !")
         if let choiceAction = readLine() {
             switch choiceAction {
             case "0":
-                print("Your character will attack an ennemy character. Choose it, please \(playerName) :")
+                print("\nYour character will attack an ennemy character. Choose it, please \(playerName) :")
                 return true
             case "1":
-                print("Your character will treat a member of his team or himself. Choose it, please \(playerName) :")
+                print("\nYour character will treat a member of his team or himself. Choose it, please \(playerName) :")
                 return false
             default:
-                print("I don't understand your choice. Please try again.")
+                print("\nI don't understand your choice. Please try again.")
             }
         }
         return wantToAttack()

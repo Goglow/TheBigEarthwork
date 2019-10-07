@@ -27,7 +27,7 @@ class Character {
                 Character.names.append(name.uppercased())
                 return name
             } else {
-                print("This name is already taken. Please, choose another name !")
+                print("\nThis name is already taken. Please, choose another name !")
             }
         }
         return addName()
@@ -37,9 +37,9 @@ class Character {
         target.life -= self.weapon.damage
         
         if target.life <= 0 {
-            print("Now, your character is dead, you can't use it anymore !")
+            print("\nNow, your character is dead, you can't use it anymore !")
         } else {
-            print("Now, the life of this character is : \(target.life) points of life.")
+            print("\nNow, the life of this character is : \(target.life) points of life.")
         }
     }
         
@@ -47,9 +47,9 @@ class Character {
         target.life += self.weapon.repair
             
         if target.life <= 0 {
-            print("Now, your character is dead, you can't use it anymore !")
+            print("\nNow, your character is dead, you can't use it anymore !")
         } else {
-            print("Now, the life of this character is : \(target.life) points of life.")
+            print("\nNow, the life of this character is : \(target.life) points of life.")
         }
     }
 }
