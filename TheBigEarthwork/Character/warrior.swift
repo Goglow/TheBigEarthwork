@@ -4,6 +4,6 @@ import Foundation
 
 class Warrior: Character {
     init(name: String) {
-        super.init(name: name, type: .Warrior, life: 120, weapon: Weapon(name: "Sword", damage: 30, repair: 10), gender: .female, power: .air)
+        super.init(name: name, type: .warrior, life: 120, weapon: Weapon(name: "Sword", damage: 30, repair: 10), gender: .female, power: .air)
     }
 }
