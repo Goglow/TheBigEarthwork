@@ -18,7 +18,7 @@ class Player {
     func introduceYourSelf() {
         print("\nHello player n°\(playerNumber) ! What is your name ?")
         if let playerName = readLine() {
-            self.playerName = playerName
+            self.playerName = playerName.capitalized
             print("\nIt's ok !")
         }
     }

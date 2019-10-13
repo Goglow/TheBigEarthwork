@@ -7,7 +7,7 @@ class Ditcher: Character {
         super.init(name: name, type: .ditcher, life: 110, weapon: Weapon(name: "Scythe", damage: 50, repair: 0), gender: .male, power: .earth)
     }
     
-    override func giveRepair(target: Character) {
-        print("I can't give repair but I can give damage !")
-    }
+    // override func giveRepair(target: Character) {
+      //  print("I can't give repair but I can give damage !")
+    //}
 }
