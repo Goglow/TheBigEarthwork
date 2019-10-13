@@ -8,5 +8,5 @@ import Foundation
 
 // In the game, there are two players identified by their number.
 var game = Game(player1: Player(playerNumber: 1), player2: Player(playerNumber: 2))
-
+// The game starts.
 game.displayMenu()

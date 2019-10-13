@@ -1,7 +1,6 @@
 import Foundation
 
-// They have one of the four elements as power. It's predefined according to the type.
-
+// Create an enumeration "Power" because the power of the characters is predefined. They have one of the four elements as power.
 enum Power {
     case air // warrior
     case earth // ditcher

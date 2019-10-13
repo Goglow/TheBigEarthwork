@@ -1,20 +1,19 @@
 import Foundation
 
-// Create a class "Player"
-
+// Create a class "Player".
 class Player {
-// This number is for identify the player.
+    // This number is for identify the player.
     var playerNumber: Int
-// For personalize the game party, the players have their names.
+    // For personalize the game party, the players have their names.
     var playerName: String
-// Player's team
+    // Player's team.
     var team = [Character]()
     
     init(playerNumber: Int) {
         self.playerNumber = playerNumber
         self.playerName = ""
     }
-// The players introduce themselves in turn.
+    // The players introduce themselves in turn.
     func introduceYourSelf() {
         print("\nHello player n°\(playerNumber) ! What is your name ?")
         if let playerName = readLine() {
@@ -22,7 +21,7 @@ class Player {
             print("\nIt's ok !")
         }
     }
-// They each create their team and name their characters.
+    // They each create their team and name their characters.
     func createYourTeam() {
         repeat {
             print("\n\(playerName), choose your character n°\(team.count + 1) :"
@@ -34,7 +33,7 @@ class Player {
                 switch choice {
                 case "0":
                     print("\nGood choice, she has the power of the fire, give her a name :")
-// Ask the player to give a name to the chosen character.
+                    // Ask the player to give a name to the chosen character.
                     let name = Character.addName()
                     let character = Enchantress(name: name)
                     team.append(character)
@@ -61,26 +60,23 @@ class Player {
     }
     
     func selectCharacter(in team: [Character]) -> Character {
-        /*Joueur 1 Choisissez votre personnage
-        // Afficher la liste des personnages
-        1. Toto - Warrior - 100HP - Sword - 20dmg
-        2. Pierre - Druid - 100HP - Potion - 5 dmg - 10 care */
+        // Show the list of characters.
         for i in 0..<team.count {
             print("\(i).", team[i].name, "-", team[i].type, "-", team[i].life, "points of life", "-", team[i].weapon.name, "-", team[i].weapon.damage, "points of damage", "-", team[i].weapon.repair, "points of repair")
         }
         if let choiceSelect = readLine() {
-           // Vérifier que choiceSelect est bien un Int
+           // Check that choiceSelect is an Int.
             if let choiceInt = Int(choiceSelect) {
-                // Regarder si ce Int est bien compris entre 0..<team.count
+                // Look if this Int is well understood between 0..<team.count.
                 if choiceInt >= 0 && choiceInt < team.count {
-                    // => On renvoie le personnage (index)
+                    // We return the character.
                     return team[choiceInt]
                 } else {
-                    // Tromper de numéro
+                    // Number error.
                     print("\nNumber must be between 0 and \(team.count - 1)")
                 }
             } else {
-            // Erreur de caractères
+            // Print error.
             print("\nI don't understand your choice ! Please, try again.")
             }
         }
@@ -88,10 +84,7 @@ class Player {
     }
     
     func wantToAttack() -> Bool {
-        /* Vérifier le type de personnage pour voir les actions disponibles
-        Vous avez sélectionner Pierre. Voulez-VOUS
-        1 - Attaquer
-        2 - Soigner */
+        // Check the character type to see the available actions.
         print("\n\(playerName), choose an action for your character :"
             + "\n0. Attack someone from the opposing team !"
             + "\n1. Treat someone from his team or himself !")

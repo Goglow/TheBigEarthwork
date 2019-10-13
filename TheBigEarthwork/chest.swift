@@ -1,5 +1,6 @@
 import Foundation
 
+// Create a struct "Chest".
 struct Chest {
     // Bonus and malus weapons list.
     var chest = [Weapon(name: "Boomerang", damage: 25, repair: 25),
@@ -8,7 +9,6 @@ struct Chest {
                  Weapon(name: "Bow", damage: 5, repair: 5),
                  Weapon(name: "Slingshot", damage: 5, repair: 5),
                  Weapon(name: "Moonstone", damage: 5, repair: 5)]
-    
     // A chest appears randomly with an weapon (bonus or malus) to replace the character's current weapon.
     // A chest appears randomly.
     func chestRandom() -> Weapon? {
@@ -23,7 +23,6 @@ struct Chest {
     private func chestWeapon() -> Weapon {
         print("In this chest, a weapon appears randomly and it is given to your character !")
         let randomIndex = Int(arc4random_uniform(UInt32(chest.count)))
-        
         return chest[randomIndex]
     }
 }

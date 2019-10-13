@@ -36,18 +36,18 @@ class Game {
     // The name of the winner is announced as well as the number of turns and the list of characters with their properties (life point, etc.).
     func endGame() {
         if player1.team.count <= 0 {
-            print("\nThe winner is \(player2.playerName) in \(numberOfRounds) rounds ! The remaining players of the team are :")
+            print("\nThe winner is \(player2.playerName) in \(numberOfRounds) rounds ! The remaining players of the team are:")
                 for i in 0..<player2.team.count {
                     print("\(i).", player2.team[i].name, "-", player2.team[i].type, "-", player2.team[i].life, "points of life", "-", player2.team[i].weapon.name)
             }
         } else if player2.team.count <= 0 {
-            print("\nThe winner is \(player1.playerName) in \(numberOfRounds) rounds ! The remaining players of the team are :")
+            print("\nThe winner is \(player1.playerName) in \(numberOfRounds) rounds ! The remaining players of the team are:")
                 for i in 0..<player1.team.count {
                 print("\(i).", player1.team[i].name, "-", player1.team[i].type, "-", player1.team[i].life, "points of life", "-", player1.team[i].weapon.name)
             }
         }
     }
-    
+    // This is a small introduction to the game for the player.
     func introduction() {
         print("""
 *************************************************************************************
@@ -59,22 +59,22 @@ class Game {
 
 """)
     }
-
+    // A confirmation of the player is necessary.
     func confirmation() {
         var confirm = true
         repeat {
             print("""
 A new game will start soon !
 
-Are you ready to start the game ? (yes or no)
+Are you ready to start the game ? [Y/n]:
 """)
             if let choiceAnswer = readLine() {
                 switch choiceAnswer {
-                case "yes":
+                case "Y":
                     print("\nLet's go !")
                     self.reset()
                     self.startGame()
-                case "no":
+                case "n":
                     print("\nSee you next time !")
                     confirm = false
                 default:
@@ -84,19 +84,20 @@ Are you ready to start the game ? (yes or no)
         } while confirm
         exit(0)
     }
-    
+    // This is the fight phase. There are an attacker and a defender.
     func fight(attackingPlayer: Player, defendingPlayer: Player) {
+        // A chest can appear.
         let chest = Chest()
-        print("\n\(attackingPlayer.playerName), choose a character for play :")
+        print("\n\(attackingPlayer.playerName), choose a character for play:")
         let attacker = attackingPlayer.selectCharacter(in: attackingPlayer.team)
         if let newWeapon = chest.chestRandom() {
             attacker.weapon = newWeapon
-            print("\nThe new information about this character is : \(attacker.name) - \(attacker.type) - \(attacker.life) points of life - \(attacker.weapon.name) - \(attacker.weapon.damage) points of damage - \(attacker.weapon.repair) points of repair")
+            print("\nThe new information about this character is: \(attacker.name) - \(attacker.type) - \(attacker.life) points of life - \(attacker.weapon.name) - \(attacker.weapon.damage) points of damage - \(attacker.weapon.repair) points of repair")
         }
-            // To check is the character is a ditcher or not.
+        // To check is the character is a ditcher or not.
         if let ditcher = attacker as? Ditcher {
             // If the attacker is a ditcher, to attack directly because he can't heal.
-            print("\nPlease, choose a target : ")
+            print("\nPlease, choose a target: ")
             let defenser = attackingPlayer.selectCharacter(in: defendingPlayer.team)
             ditcher.giveDamage(target: defenser)
                 if defenser.life <= 0 {
@@ -121,7 +122,7 @@ Are you ready to start the game ? (yes or no)
                 }
         }
     }
-    
+    // To reset the information before starting a new game.
     func reset() {
         numberOfRounds = 0
         self.player1.team = []
