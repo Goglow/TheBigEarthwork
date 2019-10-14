@@ -117,8 +117,8 @@ Are you ready to start the game? [Y/n]:
                         }
                 }
                 else {
-                    let attacker = attackingPlayer.selectCharacter(in: attackingPlayer.team)
-                    attacker.giveRepair(target: attacker)
+                    let target = attackingPlayer.selectCharacter(in: attackingPlayer.team)
+                    attacker.giveRepair(target: target)
                 }
         }
     }

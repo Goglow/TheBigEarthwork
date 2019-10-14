@@ -13,7 +13,7 @@ struct Chest {
     // A chest appears randomly.
     func chestRandom() -> Weapon? {
         let round = Int(arc4random_uniform(100))
-        if round >= 70 {
+        if round >= 85 {
             print("\nGood job! You have found a chest!")
             return chestWeapon()
         }
