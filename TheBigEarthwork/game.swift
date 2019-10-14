@@ -36,12 +36,12 @@ class Game {
     // The name of the winner is announced as well as the number of turns and the list of characters with their properties (life point, etc.).
     func endGame() {
         if player1.team.count <= 0 {
-            print("\nThe winner is \(player2.playerName) in \(numberOfRounds) rounds ! The remaining players of the team are:")
+            print("\nThe winner is \(player2.playerName) in \(numberOfRounds) rounds! The remaining players of the team are:")
                 for i in 0..<player2.team.count {
                     print("\(i).", player2.team[i].name, "-", player2.team[i].type, "-", player2.team[i].life, "points of life", "-", player2.team[i].weapon.name)
             }
         } else if player2.team.count <= 0 {
-            print("\nThe winner is \(player1.playerName) in \(numberOfRounds) rounds ! The remaining players of the team are:")
+            print("\nThe winner is \(player1.playerName) in \(numberOfRounds) rounds! The remaining players of the team are:")
                 for i in 0..<player1.team.count {
                 print("\(i).", player1.team[i].name, "-", player1.team[i].type, "-", player1.team[i].life, "points of life", "-", player1.team[i].weapon.name)
             }
@@ -54,7 +54,7 @@ class Game {
 *                   The World is in the throes of a merciless war.                  *
 *  There are no more good guys, no more bad guys, everyone is fighting endlessly... *
 *               A last fight can save the World, and you will lead it.              *
-*                           Welcome to The Big EarthWork !                          *
+*                           Welcome to The Big EarthWork!                          *
 *************************************************************************************
 
 """)
@@ -64,21 +64,21 @@ class Game {
         var confirm = true
         repeat {
             print("""
-A new game will start soon !
+A new game will start soon!
 
-Are you ready to start the game ? [Y/n]:
+Are you ready to start the game? [Y/n]:
 """)
             if let choiceAnswer = readLine() {
                 switch choiceAnswer {
                 case "Y":
-                    print("\nLet's go !")
+                    print("\nLet's go!")
                     self.reset()
                     self.startGame()
                 case "n":
-                    print("\nSee you next time !")
+                    print("\nSee you next time!")
                     confirm = false
                 default:
-                    print("\nI do not understand your choice. Please try again !\n")
+                    print("\nI do not understand your choice. Please try again!")
                 }
             }
         } while confirm
@@ -106,7 +106,7 @@ Are you ready to start the game ? [Y/n]:
                 }
         }
         else {
-            // For other characters, to ask the player is he wants to attack or heal.
+            // For other characters, to ask the player if he wants to attack or heal.
             let attack = attackingPlayer.wantToAttack()
                 if attack {
                     let defenser = attackingPlayer.selectCharacter(in: defendingPlayer.team)
