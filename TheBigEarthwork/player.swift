@@ -73,11 +73,11 @@ class Player {
                     return team[choiceInt]
                 } else {
                     // Number error.
-                    print("\nNumber must be between 0 and \(team.count - 1).")
+                    print("\nNumber must be between 0 and \(team.count - 1).\n")
                 }
             } else {
             // Print error.
-            print("\nI don't understand your choice! Please, try again.")
+            print("\nI don't understand your choice! Please, try again.\n")
             }
         }
         return selectCharacter(in: team)

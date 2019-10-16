@@ -38,13 +38,23 @@ class Game {
         if player1.team.count <= 0 {
             print("\nThe winner is \(player2.playerName) in \(numberOfRounds) rounds! The remaining players of the team are:")
                 for i in 0..<player2.team.count {
-                    print("\(i).", player2.team[i].name, "-", player2.team[i].type, "-", player2.team[i].life, "points of life", "-", player2.team[i].weapon.name)
+                print("\(i).", player2.team[i].name, "-", player2.team[i].type, "-", player2.team[i].life, "points of life", "-", player2.team[i].weapon.name)
             }
+                print("""
+
+                **********************************************************************
+
+                """)
         } else if player2.team.count <= 0 {
             print("\nThe winner is \(player1.playerName) in \(numberOfRounds) rounds! The remaining players of the team are:")
                 for i in 0..<player1.team.count {
                 print("\(i).", player1.team[i].name, "-", player1.team[i].type, "-", player1.team[i].life, "points of life", "-", player1.team[i].weapon.name)
             }
+                print("""
+                
+                **********************************************************************
+
+                """)
         }
     }
     // This is a small introduction to the game for the player.
@@ -75,10 +85,10 @@ Are you ready to start the game? [Y/n]:
                     self.reset()
                     self.startGame()
                 case "n":
-                    print("\nSee you next time!")
+                    print("\nSee you next time!\n")
                     confirm = false
                 default:
-                    print("\nI do not understand your choice. Please try again!")
+                    print("\nI do not understand your choice. Please try again!\n")
                 }
             }
         } while confirm
