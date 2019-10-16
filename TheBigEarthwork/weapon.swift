@@ -8,7 +8,7 @@ class Weapon {
     let damage: Int
     // It has a number of repair.
     let repair: Int
-    
+    // Each weapon is a function of the chosen character.
     init(name: String, damage: Int, repair: Int) {
         self.name = name
         self.damage = damage

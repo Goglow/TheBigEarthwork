@@ -25,9 +25,9 @@ class Game {
         player2.createYourTeam()
         // The fight starts. The players attack each other in turn until there is only one team left with one or more players.
         repeat {
-        fight(attackingPlayer: player1, defendingPlayer: player2)
+            fight(attackingPlayer: player1, defendingPlayer: player2)
             if player2.team.count > 0 {
-        fight(attackingPlayer: player2, defendingPlayer: player1)
+                fight(attackingPlayer: player2, defendingPlayer: player1)
             }
             numberOfRounds += 1
         } while player1.team.count > 0 && player2.team.count > 0
@@ -121,9 +121,9 @@ Are you ready to start the game? [Y/n]:
                 if attack {
                     let defenser = attackingPlayer.selectCharacter(in: defendingPlayer.team)
                     attacker.giveDamage(target: defenser)
-                        if defenser.life <= 0 {
-                            let index = defendingPlayer.team.index(where: {$0 === defenser})
-                            defendingPlayer.team.remove(at: index!)
+                    if defenser.life <= 0 {
+                        let index = defendingPlayer.team.index(where: {$0 === defenser})
+                        defendingPlayer.team.remove(at: index!)
                         }
                 }
                 else {
@@ -135,6 +135,7 @@ Are you ready to start the game? [Y/n]:
     // To reset the information before starting a new game.
     func reset() {
         numberOfRounds = 0
+        Character.names = []
         self.player1.team = []
         self.player2.team = []
     }

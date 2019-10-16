@@ -14,7 +14,7 @@ class Character {
     var gender: Gender
     // A predefined power.
     var power: Power
-    
+    // The names assigned to the character are in a array to check their uniqueness.
     static var names = [String]()
     
     init(name: String, type: Type, life: Int, weapon: Weapon, gender: Gender, power: Power) {
@@ -40,7 +40,6 @@ class Character {
     // The player may either inflict damage on an opposing team's characters.
     func giveDamage(target: Character) {
         target.life -= self.weapon.damage
-        
         if target.life <= 0 {
             print("\nNow, your character is dead, you can't use it anymore!")
         } else {
@@ -50,7 +49,6 @@ class Character {
     // Or heal someone on his team.
     func giveRepair(target: Character) {
         target.life += self.weapon.repair
-            
         if target.life <= 0 {
             print("\nNow, your character is dead, you can't use it anymore!")
         } else {

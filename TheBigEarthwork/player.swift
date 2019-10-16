@@ -58,7 +58,7 @@ class Player {
             }
         } while(team.count < 3)
     }
-    
+    // Players choose which character to play with.
     func selectCharacter(in team: [Character]) -> Character {
         // Show the list of characters.
         for i in 0..<team.count {
@@ -82,7 +82,7 @@ class Player {
         }
         return selectCharacter(in: team)
     }
-    
+    // Players choose the action of their character according to their possibility.
     func wantToAttack() -> Bool {
         // Check the character type to see the available actions.
         print("\n\(playerName), choose an action for your character:"
