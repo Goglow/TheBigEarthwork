@@ -6,4 +6,3 @@ class Enchantress: Character {
         super.init(name: name, type: .enchantress , life: 120, weapon: Weapon(name: "Philter", damage: 20, repair: 20), gender: .female, power: .fire)
     }
 }
-
