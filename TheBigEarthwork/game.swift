@@ -64,7 +64,7 @@ class Game {
 *                   The World is in the throes of a merciless war.                  *
 *  There are no more good guys, no more bad guys, everyone is fighting endlessly... *
 *               A last fight can save the World, and you will lead it.              *
-*                           Welcome to The Big EarthWork!                          *
+*                           Welcome to The Big EarthWork!                           *
 *************************************************************************************
 
 """)
@@ -111,7 +111,7 @@ Are you ready to start the game? [Y/n]:
             let defenser = attackingPlayer.selectCharacter(in: defendingPlayer.team)
             ditcher.giveDamage(target: defenser)
                 if defenser.life <= 0 {
-                    let index = defendingPlayer.team.index(where: {$0 === defenser})
+                    let index = defendingPlayer.team.firstIndex(where: {$0 === defenser})
                     defendingPlayer.team.remove(at: index!)
                 }
         }
@@ -122,7 +122,7 @@ Are you ready to start the game? [Y/n]:
                     let defenser = attackingPlayer.selectCharacter(in: defendingPlayer.team)
                     attacker.giveDamage(target: defenser)
                     if defenser.life <= 0 {
-                        let index = defendingPlayer.team.index(where: {$0 === defenser})
+                        let index = defendingPlayer.team.firstIndex(where: {$0 === defenser})
                         defendingPlayer.team.remove(at: index!)
                         }
                 }

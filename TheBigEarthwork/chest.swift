@@ -12,7 +12,7 @@ struct Chest {
     // A chest appears randomly with an weapon (bonus or malus) to replace the character's current weapon.
     // A chest appears randomly.
     func chestRandom() -> Weapon? {
-        let round = Int(arc4random_uniform(100))
+        let round = Int(Int.random(in : 0...100))
         if round >= 85 {
             print("\nGood job! You have found a chest!")
             return chestWeapon()
